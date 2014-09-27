@@ -186,6 +186,11 @@ Interface = {
         }).fly();
 
         //Localization
+        var localization = new Element('img', {
+            'src': 'img/localization.jpg',
+            'title': 'Localização'
+        });
+        new FlyingChar(localization, 464, 60).fly();
         new FlyingChar('Rio de Janeiro, RJ, BR', 470, 90, {
             'class': 'h2',
             'spacing': 7,
