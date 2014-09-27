@@ -36,7 +36,7 @@ Interface = {
         frame.addElement('+', margin, margin);
 
         var qtd_y = ((window.getSize().y - (margin * 2.2)) / (cs.y)).toInt() - 1;
-        var qtd_x = ((window.getSize().x - (margin * 2.2)) / (cs.x)).toInt() - 1;
+        var qtd_x = ((window.getSize().x - (margin * 2.2)) / (cs.x)).toInt() - 92;
 
         //left 1
         var n1 = cs.y + margin - 10;
@@ -54,18 +54,17 @@ Interface = {
         }
 
         //top
-        var n2 = cs.x + margin;
-        var char, z;
+        var z = 7;
+        var n2 = cs.x + margin + z;
+        var char;
         for (var i=0; i<qtd_x; i++) {
-            if (i == 15) {
+            if (i == 16) {
                 char = '+';
-                z = 0;
             } else {
                 char = '-';
-                z = 1;
             }
-            frame.addElement(char, margin - z, n2);
-            n2 += cs.x;
+            frame.addElement(char, margin, n2);
+            n2 += cs.x + z;
         }
         frame.addElement('+',  margin, n2);
 
@@ -78,17 +77,16 @@ Interface = {
         frame.addElement('+', n3 - 7, n2);
 
         //bottom
-        var n4 = cs.x + margin;
+        var x = 7;
+        var n4 = cs.x + margin + x;
         for (var i=0; i<qtd_x; i++) {
-            if (i == 15) {
+            if (i == 16){
                 char = '+';
-                z = 6;
             } else {
                 char = '-';
-                z = 7;
             }
-            frame.addElement(char, n3 - z, n4);
-            n4 += cs.x;
+            frame.addElement(char, n3 - 6, n4);
+            n4 += cs.x + x;
         }
 
         frame.fly();
