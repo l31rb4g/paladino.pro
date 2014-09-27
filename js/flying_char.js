@@ -21,13 +21,19 @@ FlyingChar = new Class({
 
         this.el = new Element('span', {
             'class': 'flyingChar' + (this.options.class ? ' ' + this.options.class : ''),
-            'text': this.char,
             'styles': {
                 'top': randomPositions['top'],
                 'left': randomPositions['left']
             },
             'morph': this.morph
-        }).inject($$('body')[0]);
+        });
+        if (typeOf(this.char) == 'string'){
+            this.el.set('text', this.char);
+        } else {
+            this.el.adopt(this.char);
+        }
+
+        this.el.inject($$('body')[0]);
     },
 
     fly: function(){

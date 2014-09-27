@@ -3,6 +3,9 @@ Interface = {
     initialize: function(){
         //this.menu = new FlyingMenu();
         this.buildFrame();
+        setTimeout(function(){
+            this.picture()
+        }.bind(this), 1500);
     },
 
     getCharSize: function(cl){
@@ -22,6 +25,7 @@ Interface = {
     buildFrame: function(){
         var frame = new FlyingObject({'class': 'frame'});
         var margin = 30;
+        this.margin = margin;
         var cs = Interface.getCharSize('frame');
 
         frame.addElement('+', margin, margin);
@@ -83,6 +87,59 @@ Interface = {
         }
 
         frame.fly();
+    },
+
+    picture: function(){
+        var frame = new FlyingObject({'class': 'picture'});
+
+        var img = new Element('img', {
+            'src': 'img/foto1.jpg'
+        })
+        frame.addElement(img, this.margin + 45, this.margin + 40);
+
+        var img = new Element('img', {
+            'src': 'img/foto2.jpg'
+        })
+        frame.addElement(img, this.margin + 45, this.margin + 107);
+
+        var img = new Element('img', {
+            'src': 'img/foto3.jpg'
+        })
+        frame.addElement(img, this.margin + 45, this.margin + 173);
+
+        var img = new Element('img', {
+            'src': 'img/foto4.jpg'
+        })
+        frame.addElement(img, this.margin + 112, this.margin + 40);
+
+        var img = new Element('img', {
+            'src': 'img/foto5.jpg'
+        })
+        frame.addElement(img, this.margin + 112, this.margin + 107);
+
+        var img = new Element('img', {
+            'src': 'img/foto6.jpg'
+        })
+        frame.addElement(img, this.margin + 112, this.margin + 173);
+
+
+
+        var img = new Element('img', {
+            'src': 'img/foto7.jpg'
+        })
+        frame.addElement(img, this.margin + 178, this.margin + 40);
+
+        var img = new Element('img', {
+            'src': 'img/foto8.jpg'
+        })
+        frame.addElement(img, this.margin + 178, this.margin + 107);
+
+        var img = new Element('img', {
+            'src': 'img/foto9.jpg'
+        })
+        frame.addElement(img, this.margin + 178, this.margin + 173);
+
+        frame.fly()
     }
 
 };
