@@ -35,8 +35,8 @@ Interface = {
 
         frame.addElement('+', margin, margin);
 
-        var qtd_y = ((window.getSize().y - (margin * 2.2)) / (cs.y)).toInt() - 1;
-        var qtd_x = ((window.getSize().x - (margin * 2.2)) / (cs.x)).toInt() - 92;
+        var qtd_y = ((window.getSize().y - (margin * 2.2)) / cs.y).toInt() - 1;
+        var qtd_x = ((window.getSize().x - (margin * 2)) / 16).toInt() - 2;
 
         //left 1
         var n1 = cs.y + margin - 10;
