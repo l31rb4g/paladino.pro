@@ -156,7 +156,7 @@ Interface = {
             'spacing': 7
         }).fly();
 
-
+        //E-mail
         new FlyingChar('@', 391, 55, {
             'class': 'arroba',
             'title': 'E-mail'
@@ -173,18 +173,26 @@ Interface = {
             'title': 'E-mail'
         }).fly();
 
+        //Phone
+        var phone = new Element('img', {
+            'src': 'img/phone.jpg',
+            'title': 'Telefone'
+        });
+        new FlyingChar(phone, 429, 55).fly();
         new FlyingChar('+55 (21) 98804-7007', 435, 90, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Telefone'
         }).fly();
 
+        //Localization
         new FlyingChar('Rio de Janeiro, RJ, BR', 470, 90, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Localização'
         }).fly();
 
+        //GitHub
         var github = new Element('a', {
             'href': 'https://github.com/l31rb4g',
             'target': '_blank',
@@ -209,6 +217,7 @@ Interface = {
             'spacing': 7
         }).fly();
 
+        //LinkedIn
         var linkedin = new Element('a', {
             'href': 'https://www.linkedin.com/pub/gabriel-paladino/7b/505/795',
             'target': '_blank',
@@ -233,6 +242,7 @@ Interface = {
             'spacing': 7
         }).fly();
 
+        //Facebook
         var facebook = new Element('a', {
             'href': 'https://www.facebook.com/grppaladino',
             'target': '_blank',
