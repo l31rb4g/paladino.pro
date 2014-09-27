@@ -95,49 +95,49 @@ Interface = {
         var img = new Element('img', {
             'src': 'img/foto1.jpg'
         })
-        frame.addElement(img, this.margin + 45, this.margin + 40);
+        frame.addElement(img, this.margin + 44, this.margin + 44);
 
         var img = new Element('img', {
             'src': 'img/foto2.jpg'
         })
-        frame.addElement(img, this.margin + 45, this.margin + 107);
+        frame.addElement(img, this.margin + 44, this.margin + 111);
 
         var img = new Element('img', {
             'src': 'img/foto3.jpg'
         })
-        frame.addElement(img, this.margin + 45, this.margin + 173);
+        frame.addElement(img, this.margin + 44, this.margin + 177);
 
         var img = new Element('img', {
             'src': 'img/foto4.jpg'
         })
-        frame.addElement(img, this.margin + 112, this.margin + 40);
+        frame.addElement(img, this.margin + 111, this.margin + 44);
 
         var img = new Element('img', {
             'src': 'img/foto5.jpg'
         })
-        frame.addElement(img, this.margin + 112, this.margin + 107);
+        frame.addElement(img, this.margin + 111, this.margin + 111);
 
         var img = new Element('img', {
             'src': 'img/foto6.jpg'
         })
-        frame.addElement(img, this.margin + 112, this.margin + 173);
+        frame.addElement(img, this.margin + 111, this.margin + 177);
 
 
 
         var img = new Element('img', {
             'src': 'img/foto7.jpg'
         })
-        frame.addElement(img, this.margin + 178, this.margin + 40);
+        frame.addElement(img, this.margin + 177, this.margin + 44);
 
         var img = new Element('img', {
             'src': 'img/foto8.jpg'
         })
-        frame.addElement(img, this.margin + 178, this.margin + 107);
+        frame.addElement(img, this.margin + 177, this.margin + 111);
 
         var img = new Element('img', {
             'src': 'img/foto9.jpg'
         })
-        frame.addElement(img, this.margin + 178, this.margin + 173);
+        frame.addElement(img, this.margin + 177, this.margin + 177);
 
         frame.fly()
     }
