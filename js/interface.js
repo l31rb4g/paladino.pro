@@ -4,8 +4,11 @@ Interface = {
         //this.menu = new FlyingMenu();
         this.buildFrame();
         setTimeout(function(){
-            this.picture()
+            this.picture();
         }.bind(this), 1500);
+        setTimeout(function(){
+            this.leftColumn();
+        }.bind(this), 1750);
     },
 
     getCharSize: function(cl){
@@ -90,56 +93,83 @@ Interface = {
     },
 
     picture: function(){
-        var frame = new FlyingObject({'class': 'picture'});
+        var obj = new FlyingObject({'class': 'picture'});
 
         var img = new Element('img', {
             'src': 'img/foto1.jpg'
         })
-        frame.addElement(img, this.margin + 44, this.margin + 44);
+        obj.addElement(img, this.margin + 44, this.margin + 44);
 
         var img = new Element('img', {
             'src': 'img/foto2.jpg'
         })
-        frame.addElement(img, this.margin + 44, this.margin + 111);
+        obj.addElement(img, this.margin + 44, this.margin + 111);
 
         var img = new Element('img', {
             'src': 'img/foto3.jpg'
         })
-        frame.addElement(img, this.margin + 44, this.margin + 177);
+        obj.addElement(img, this.margin + 44, this.margin + 177);
 
         var img = new Element('img', {
             'src': 'img/foto4.jpg'
         })
-        frame.addElement(img, this.margin + 111, this.margin + 44);
+        obj.addElement(img, this.margin + 111, this.margin + 44);
 
         var img = new Element('img', {
             'src': 'img/foto5.jpg'
         })
-        frame.addElement(img, this.margin + 111, this.margin + 111);
+        obj.addElement(img, this.margin + 111, this.margin + 111);
 
         var img = new Element('img', {
             'src': 'img/foto6.jpg'
         })
-        frame.addElement(img, this.margin + 111, this.margin + 177);
-
+        obj.addElement(img, this.margin + 111, this.margin + 177);
 
 
         var img = new Element('img', {
             'src': 'img/foto7.jpg'
         })
-        frame.addElement(img, this.margin + 177, this.margin + 44);
+        obj.addElement(img, this.margin + 177, this.margin + 44);
 
         var img = new Element('img', {
             'src': 'img/foto8.jpg'
         })
-        frame.addElement(img, this.margin + 177, this.margin + 111);
+        obj.addElement(img, this.margin + 177, this.margin + 111);
 
         var img = new Element('img', {
             'src': 'img/foto9.jpg'
         })
-        frame.addElement(img, this.margin + 177, this.margin + 177);
+        obj.addElement(img, this.margin + 177, this.margin + 177);
 
-        frame.fly()
+        obj.fly()
+    },
+
+    leftColumn: function(){
+
+        new FlyingString('Gabriel Paladino', 290, 78, {
+            'class': 'h1',
+            'spacing': 12
+        }).fly();
+
+        new FlyingString('Senior Software Engineer', 315, 90, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+
+
+        new FlyingChar('@', 391, 60, {
+            'class': 'arroba'
+        }).fly();
+
+        var email = new Element('a', {
+            'href': 'mailto:gabriel@paladino.pro',
+            'text': 'gabriel@paladino.pro'
+        });
+        new FlyingChar(email, 400, 88, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+
     }
 
 };

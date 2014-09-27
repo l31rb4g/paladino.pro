@@ -14,7 +14,7 @@ FlyingString = new Class({
         var x = left;
         for (var i=0; i<string.length; i++) {
             this.addElement(string.substr(i, 1), top, x);
-            x += this.spacing;
+            x += this.options.spacing;
         }
 
         this.fly();
