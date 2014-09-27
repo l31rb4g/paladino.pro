@@ -1,0 +1,13 @@
+body {
+    font-family: monospace;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+.flyingChar {
+    position: absolute;
+    display: inline-block;
+}
+.frame {
+    font-size: 28px;
+}
