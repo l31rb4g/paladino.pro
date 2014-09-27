@@ -157,7 +157,7 @@ Interface = {
         }).fly();
 
 
-        new FlyingChar('@', 391, 60, {
+        new FlyingChar('@', 391, 55, {
             'class': 'arroba'
         }).fly();
 
@@ -165,7 +165,89 @@ Interface = {
             'href': 'mailto:gabriel@paladino.pro',
             'text': 'gabriel@paladino.pro'
         });
-        new FlyingChar(email, 400, 88, {
+        new FlyingChar(email, 400, 90, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+
+        new FlyingChar('+55 (21) 98804-7007', 435, 90, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+
+        new FlyingChar('Rio de Janeiro, RJ, BR', 470, 90, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+
+        var github = new Element('a', {
+            'href': 'https://github.com/l31rb4g',
+            'target': '_blank',
+            'title': 'GitHub'
+        }).adopt(
+            new Element('img', {
+                'src': 'img/blacktocat.jpg'
+            })
+        );
+        new FlyingChar(github, 498, 55, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+        github = new Element('a', {
+            'href': 'https://github.com/l31rb4g',
+            'target': '_blank',
+            'text': 'https://github.com/l31rb4g',
+            'title': 'GitHub'
+        });
+        new FlyingChar(github, 505, 90, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+
+        var linkedin = new Element('a', {
+            'href': 'https://www.linkedin.com/pub/gabriel-paladino/7b/505/795',
+            'target': '_blank',
+            'title': 'LinkedIn'
+        }).adopt(
+            new Element('img', {
+                'src': 'img/linkedin.jpg'
+            })
+        );
+        new FlyingChar(linkedin, 534, 55, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+        linkedin = new Element('a', {
+            'href': 'https://www.linkedin.com/pub/gabriel-paladino/7b/505/795',
+            'target': '_blank',
+            'text': '/pub/gabriel-paladino',
+            'title': 'LinkedIn'
+        });
+        new FlyingChar(linkedin, 540, 90, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+
+        var facebook = new Element('a', {
+            'href': 'https://www.facebook.com/grppaladino',
+            'target': '_blank',
+            'title': 'Facebook'
+        }).adopt(
+            new Element('img', {
+                'src': 'img/facebook.jpg'
+            })
+        );
+        new FlyingChar(facebook, 568, 55, {
+            'class': 'h2',
+            'spacing': 7
+        }).fly();
+        linkedin = new Element('a', {
+            'href': 'https://www.facebook.com/grppaladino',
+            'target': '_blank',
+            'text': 'facebook.com/grppaladino',
+            'title': 'Facebook'
+        });
+        new FlyingChar(linkedin, 575, 90, {
             'class': 'h2',
             'spacing': 7
         }).fly();
