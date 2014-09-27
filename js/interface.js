@@ -209,7 +209,7 @@ Interface = {
         github = new Element('a', {
             'href': 'https://github.com/l31rb4g',
             'target': '_blank',
-            'text': 'https://github.com/l31rb4g',
+            'text': 'github.com/l31rb4g',
             'title': 'GitHub'
         });
         new FlyingChar(github, 505, 90, {
@@ -219,7 +219,7 @@ Interface = {
 
         //LinkedIn
         var linkedin = new Element('a', {
-            'href': 'https://www.linkedin.com/pub/gabriel-paladino/7b/505/795',
+            'href': 'https://www.linkedin.com/in/grppaladino',
             'target': '_blank',
             'title': 'LinkedIn'
         }).adopt(
@@ -232,9 +232,9 @@ Interface = {
             'spacing': 7
         }).fly();
         linkedin = new Element('a', {
-            'href': 'https://www.linkedin.com/pub/gabriel-paladino/7b/505/795',
+            'href': 'https://www.linkedin.com/in/grppaladino',
             'target': '_blank',
-            'text': '/pub/gabriel-paladino',
+            'text': 'linkedin.com/in/grppaladino',
             'title': 'LinkedIn'
         });
         new FlyingChar(linkedin, 540, 90, {
