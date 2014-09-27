@@ -35,57 +35,63 @@ Interface = {
 
         frame.addElement('+', margin, margin);
 
-        var qtd_y = ((window.getSize().y - (margin * 2.2)) / cs.y).toInt() - 1;
+        var qtd_y = ((window.getSize().y - (margin * 2.2)) / 28).toInt() - 4;
         var qtd_x = ((window.getSize().x - (margin * 2)) / 16).toInt() - 2;
 
         //left 1
-        var n1 = cs.y + margin - 10;
+        var n1 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
             frame.addElement('|', n1, margin);
-            n1 += cs.y;
+            n1 += cs.y + 4;
         }
         frame.addElement('+', n1 - 6, margin);
 
         //left 2
-        var n1 = cs.y + margin - 10;
+        var n1 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
             frame.addElement('|', n1, margin + 272);
-            n1 += cs.y;
+            n1 += cs.y + 4;
         }
 
         //top
         var z = 7;
+        var y = 3;
         var n2 = cs.x + margin + z;
         var char;
         for (var i=0; i<qtd_x; i++) {
             if (i == 16) {
                 char = '+';
+                y = 0;
             } else {
                 char = '-';
+                y = 3;
             }
-            frame.addElement(char, margin, n2);
+            frame.addElement(char, margin - y, n2);
             n2 += cs.x + z;
         }
         frame.addElement('+',  margin, n2);
 
         //right
-        var n3 = cs.y + margin - 10;
+        var n3 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
             frame.addElement('|', n3, n2);
-            n3 += cs.y;
+            n3 += cs.y + 4;
         }
-        frame.addElement('+', n3 - 7, n2);
+        frame.addElement('+', n3 - 6, n2);
 
         //bottom
         var x = 7;
+        var z;
         var n4 = cs.x + margin + x;
         for (var i=0; i<qtd_x; i++) {
             if (i == 16){
                 char = '+';
+                z = 6;
             } else {
                 char = '-';
+                z = 8;
             }
-            frame.addElement(char, n3 - 6, n4);
+            frame.addElement(char, n3 - z, n4);
             n4 += cs.x + x;
         }
 
