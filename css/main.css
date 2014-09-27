@@ -1,9 +1,9 @@
 @font-face {
     font-family: defaultFont;
-    src: url(../Cousine-Regular.woff);
+    src: url(../UbuntuMono-R.woff);
 }
 * {
-    font-family: defaultFont;
+    font-family: defaultFont!important;
 }
 body {
     overflow: hidden;
