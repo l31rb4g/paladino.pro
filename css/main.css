@@ -3,7 +3,7 @@
     src: url(../UbuntuMono-R.woff);
 }
 * {
-    font-family: defaultFont!important;
+    font-family: defaultFont;
 }
 body {
     overflow: hidden;
