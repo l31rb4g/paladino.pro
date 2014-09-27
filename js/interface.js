@@ -21,7 +21,7 @@ Interface = {
 
     buildFrame: function(){
         var frame = new FlyingObject({'class': 'frame'});
-        var margin = 50;
+        var margin = 30;
         var cs = Interface.getCharSize('frame');
 
         frame.addElement('+', margin, margin);
@@ -29,7 +29,7 @@ Interface = {
         var qtd_y = ((window.getSize().y - (margin * 2.2)) / (cs.y)).toInt() - 1;
         var qtd_x = ((window.getSize().x - (margin * 2.2)) / (cs.x)).toInt() - 1;
 
-        //left
+        //left 1
         var n1 = cs.y + margin - 10;
         for (var i=0; i<qtd_y; i++) {
             frame.addElement('|', n1, margin);
@@ -37,10 +37,25 @@ Interface = {
         }
         frame.addElement('+', n1 - 6, margin);
 
+        //left 2
+        var n1 = cs.y + margin - 10;
+        for (var i=0; i<qtd_y; i++) {
+            frame.addElement('|', n1, margin + 272);
+            n1 += cs.y;
+        }
+
         //top
         var n2 = cs.x + margin;
+        var char, z;
         for (var i=0; i<qtd_x; i++) {
-            frame.addElement('-', margin - 1, n2);
+            if (i == 15) {
+                char = '+';
+                z = 0;
+            } else {
+                char = '-';
+                z = 1;
+            }
+            frame.addElement(char, margin - z, n2);
             n2 += cs.x;
         }
         frame.addElement('+',  margin, n2);
@@ -56,7 +71,14 @@ Interface = {
         //bottom
         var n4 = cs.x + margin;
         for (var i=0; i<qtd_x; i++) {
-            frame.addElement('-', n3 - 7, n4);
+            if (i == 15) {
+                char = '+';
+                z = 6;
+            } else {
+                char = '-';
+                z = 7;
+            }
+            frame.addElement(char, n3 - z, n4);
             n4 += cs.x;
         }
 
