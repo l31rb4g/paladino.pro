@@ -1,6 +1,6 @@
 @font-face {
     font-family: defaultFont;
-    src: url(../UbuntuMono-R.woff);
+    src: url(../DroidSansMono.woff);
 }
 * {
     font-family: defaultFont;
