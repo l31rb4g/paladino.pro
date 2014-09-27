@@ -158,7 +158,7 @@ Interface = {
             'spacing': 7
         }).fly();
 
-        var padding_top = 260;
+        var padding_top = 280;
 
         //E-mail
         new FlyingChar('@', padding_top + 91, 55, {
