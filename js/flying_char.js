@@ -2,6 +2,10 @@ FlyingChar = new Class({
 
     Implements: Options,
 
+    options: {
+        title: null
+    },
+
     morph: {
         duration: 500
     },
@@ -21,6 +25,7 @@ FlyingChar = new Class({
 
         this.el = new Element('span', {
             'class': 'flyingChar' + (this.options.class ? ' ' + this.options.class : ''),
+            'title':  (this.options.title ? this.options.title : ''),
             'styles': {
                 'top': randomPositions['top'],
                 'left': randomPositions['left']

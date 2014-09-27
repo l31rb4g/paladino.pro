@@ -158,26 +158,31 @@ Interface = {
 
 
         new FlyingChar('@', 391, 55, {
-            'class': 'arroba'
+            'class': 'arroba',
+            'title': 'E-mail'
         }).fly();
 
         var email = new Element('a', {
             'href': 'mailto:gabriel@paladino.pro',
-            'text': 'gabriel@paladino.pro'
+            'text': 'gabriel@paladino.pro',
+            'title': 'E-mail'
         });
         new FlyingChar(email, 400, 90, {
             'class': 'h2',
-            'spacing': 7
+            'spacing': 7,
+            'title': 'E-mail'
         }).fly();
 
         new FlyingChar('+55 (21) 98804-7007', 435, 90, {
             'class': 'h2',
-            'spacing': 7
+            'spacing': 7,
+            'title': 'Telefone'
         }).fly();
 
         new FlyingChar('Rio de Janeiro, RJ, BR', 470, 90, {
             'class': 'h2',
-            'spacing': 7
+            'spacing': 7,
+            'title': 'Localização'
         }).fly();
 
         var github = new Element('a', {
