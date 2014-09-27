@@ -1,5 +1,9 @@
+@font-face {
+    font-family: defaultFont;
+    src: url(../Cousine-Regular.woff);
+}
 * {
-    font-family: monospace;
+    font-family: defaultFont;
 }
 body {
     overflow: hidden;
