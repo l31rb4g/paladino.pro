@@ -96,7 +96,7 @@ Interface = {
         frame.fly();
     },
 
-    picture: function(){
+    picture_old: function(){
         var obj = new FlyingObject({'class': 'picture'});
 
         var img = new Element('img', {
@@ -148,9 +148,37 @@ Interface = {
         obj.fly()
     },
 
+    picture: function(){
+        var obj = new FlyingObject({'class': 'picture'});
+        var r = 1;
+        var c = 1;
+        var stepx = 0;
+        var stepy = 0;
+
+        for (var i=0; i<64; i++) {
+
+            var img = new Element('img', {
+                'src': 'img/foto/foto1_r' + r + '_c' + c + '.jpg'
+            });
+            obj.addElement(img, this.margin + 44 + stepy, this.margin + 44 + stepx);
+
+            if (c == 8) {
+                r++;
+                c = 1;
+                stepx = 0;
+                stepy += 25;
+            } else {
+                c++;
+                stepx += 25;
+            }
+        }
+
+        obj.fly()
+    },
+
     leftColumn: function(){
 
-        new FlyingString('Gabriel Paladino', 290, 78, {
+        window.gp = new FlyingString('Gabriel Paladino', 290, 78, {
             'class': 'h1',
             'spacing': 12
         }).fly();
