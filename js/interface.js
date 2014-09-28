@@ -11,7 +11,7 @@ Interface = {
         }.bind(this), 1200);
         setTimeout(function(){
             this.leftColumn();
-        }.bind(this), 850);
+        }.bind(this), 750);
         setTimeout(function(){
             this.menu();
         }.bind(this), 2000);
@@ -154,12 +154,14 @@ Interface = {
             'class': 'h1',
             'spacing': 12,
             'interval': 25,
-            'duration': 1200
+            'duration': 2000
         }).fly();
 
         new FlyingString('Senior Software Engineer', 315, 90 + this.centerWidth, {
             'class': 'h2',
-            'spacing': 7
+            'spacing': 7,
+            'interval': 25,
+            'duration': 1000
         }).fly();
 
         var padding_top = 280;
