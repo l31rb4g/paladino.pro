@@ -29,7 +29,7 @@ Interface = {
     buildFrame: function(){
         var frame = new FlyingObject({
             'class': 'frame',
-            'interval': 10,
+            'interval': 9,
             'duration': 500
         });
         var margin = 30;
