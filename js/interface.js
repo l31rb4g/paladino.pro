@@ -35,8 +35,7 @@ Interface = {
 
         frame.addElement('+', margin, margin);
 
-        var qtd_y = Math.ceil((window.getSize().y - (margin * 2)) / 32) - 1;
-        console.log('wtd', qtd_y)
+        var qtd_y = Math.ceil((window.getSize().y - (margin * 2)) / 33);
         var qtd_x = ((window.getSize().x - (margin * 2)) / 17).toInt() - 3;
 
         //left 1
