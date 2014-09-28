@@ -2,7 +2,11 @@ FlyingObject = new Class({
 
     Implements: Options,
 
-    interval: 6,
+    options: {
+        interval: 6,
+        duration: 500
+    },
+
     sequence: [],
     chars: [],
 
@@ -27,7 +31,7 @@ FlyingObject = new Class({
         this.sequence.each(function(charInfo){
             setTimeout(function() {
                 this.chars.push(new FlyingChar(charInfo[0], charInfo[1], charInfo[2], this.options));
-            }.bind(this), this.interval * i);
+            }.bind(this), this.options.interval * i);
             i++;
         }.bind(this));
 

@@ -3,15 +3,16 @@ FlyingChar = new Class({
     Implements: Options,
 
     options: {
-        title: null
+        title: null,
+        duration: 500
     },
 
     morph: {
-        duration: 500
     },
 
     initialize: function(char, top, left, options){
         this.setOptions(options);
+        this.morph.duration = this.options.duration;
 
         this.char = char;
         this.top = top;
