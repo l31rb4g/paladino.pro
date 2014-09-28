@@ -121,7 +121,7 @@ Interface = {
         var obj = new FlyingObject({
             'class': 'picture',
             'duration': 500,
-            interval: 25
+            interval: 30
         });
         var r = 1;
         var c = 1;
