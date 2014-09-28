@@ -100,7 +100,10 @@ Interface = {
     },
 
     picture: function(){
-        var obj = new FlyingObject({'class': 'picture'});
+        var obj = new FlyingObject({
+            'class': 'picture',
+            'duration': 750
+        });
         var r = 1;
         var c = 1;
         var stepx = 0;
