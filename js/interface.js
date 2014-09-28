@@ -152,14 +152,14 @@ Interface = {
 
     leftColumn: function(){
 
-        window.gp = new FlyingString('Gabriel Paladino', 290, 78 + this.centerWidth, {
+        window.gp = new FlyingString('Gabriel Paladino', 290 + this.centerHeight, 78 + this.centerWidth, {
             'class': 'h1',
             'spacing': 12,
             'interval': 25,
             'duration': 2000
         }).fly();
 
-        new FlyingString('Senior Software Engineer', 315, 90 + this.centerWidth, {
+        new FlyingString('Senior Software Engineer', 315 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'interval': 25,
@@ -169,7 +169,7 @@ Interface = {
         var padding_top = 280;
 
         //E-mail
-        new FlyingChar('@', padding_top + 91, 55 + this.centerWidth, {
+        new FlyingChar('@', padding_top + 91 + this.centerHeight, 55 + this.centerWidth, {
             'class': 'arroba',
             'title': 'E-mail'
         }).fly();
@@ -179,7 +179,7 @@ Interface = {
             'text': 'gabriel@paladino.pro',
             'title': 'E-mail'
         });
-        new FlyingChar(email, padding_top + 100, 90 + this.centerWidth, {
+        new FlyingChar(email, padding_top + 100 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'E-mail'
@@ -190,8 +190,8 @@ Interface = {
             'src': 'img/phone.jpg',
             'title': 'Telefone'
         });
-        new FlyingChar(phone, padding_top + 129, 55 + this.centerWidth).fly();
-        new FlyingChar('+55 (21) 98804-7007', padding_top + 135, 90 + this.centerWidth, {
+        new FlyingChar(phone, padding_top + 129 + this.centerHeight, 55 + this.centerWidth).fly();
+        new FlyingChar('+55 (21) 98804-7007', padding_top + 135 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Telefone'
@@ -202,8 +202,8 @@ Interface = {
             'src': 'img/skype.jpg',
             'title': 'Skype'
         });
-        new FlyingChar(skype, padding_top + 164, 55 + this.centerWidth).fly();
-        new FlyingChar('l31rb4g', padding_top + 170, 90 + this.centerWidth, {
+        new FlyingChar(skype, padding_top + 164 + this.centerHeight, 55 + this.centerWidth).fly();
+        new FlyingChar('l31rb4g', padding_top + 170 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Skype'
@@ -214,8 +214,8 @@ Interface = {
             'src': 'img/localization.jpg',
             'title': 'Localização'
         });
-        new FlyingChar(localization, padding_top + 199, 60 + this.centerWidth).fly();
-        new FlyingChar('Rio de Janeiro, RJ, BR', padding_top + 205, 90 + this.centerWidth, {
+        new FlyingChar(localization, padding_top + 199 + this.centerHeight, 60 + this.centerWidth).fly();
+        new FlyingChar('Rio de Janeiro, RJ, BR', padding_top + 205 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Localização'
@@ -231,7 +231,7 @@ Interface = {
                 'src': 'img/blacktocat.jpg'
             })
         );
-        new FlyingChar(github, padding_top + 233, 55 + this.centerWidth, {
+        new FlyingChar(github, padding_top + 233 + this.centerHeight, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -241,7 +241,7 @@ Interface = {
             'text': 'github.com/l31rb4g',
             'title': 'GitHub'
         });
-        new FlyingChar(github, padding_top + 240, 90 + this.centerWidth, {
+        new FlyingChar(github, padding_top + 240 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -256,7 +256,7 @@ Interface = {
                 'src': 'img/linkedin.jpg'
             })
         );
-        new FlyingChar(linkedin, padding_top + 269, 55 + this.centerWidth, {
+        new FlyingChar(linkedin, padding_top + 269 + this.centerHeight, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -266,7 +266,7 @@ Interface = {
             'text': 'linkedin.com/in/grppaladino',
             'title': 'LinkedIn'
         });
-        new FlyingChar(linkedin, padding_top + 275, 90 + this.centerWidth, {
+        new FlyingChar(linkedin, padding_top + 275 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -281,7 +281,7 @@ Interface = {
                 'src': 'img/facebook.jpg'
             })
         );
-        new FlyingChar(facebook, padding_top + 303, 55 + this.centerWidth, {
+        new FlyingChar(facebook, padding_top + 303 + this.centerHeight, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -291,7 +291,7 @@ Interface = {
             'text': 'facebook.com/grppaladino',
             'title': 'Facebook'
         });
-        new FlyingChar(linkedin, padding_top + 310, 90 + this.centerWidth, {
+        new FlyingChar(linkedin, padding_top + 310 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
