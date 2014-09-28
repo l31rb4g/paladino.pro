@@ -186,13 +186,25 @@ Interface = {
             'title': 'Telefone'
         }).fly();
 
+        //Skype
+        var skype = new Element('img', {
+            'src': 'img/skype.jpg',
+            'title': 'Skype'
+        });
+        new FlyingChar(skype, padding_top + 164, 55).fly();
+        new FlyingChar('l31rb4g', padding_top + 170, 90, {
+            'class': 'h2',
+            'spacing': 7,
+            'title': 'Skype'
+        }).fly();
+
         //Localization
         var localization = new Element('img', {
             'src': 'img/localization.jpg',
             'title': 'Localização'
         });
-        new FlyingChar(localization, padding_top + 164, 60).fly();
-        new FlyingChar('Rio de Janeiro, RJ, BR', padding_top + 170, 90, {
+        new FlyingChar(localization, padding_top + 199, 60).fly();
+        new FlyingChar('Rio de Janeiro, RJ, BR', padding_top + 205, 90, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Localização'
@@ -208,7 +220,7 @@ Interface = {
                 'src': 'img/blacktocat.jpg'
             })
         );
-        new FlyingChar(github, padding_top + 198, 55, {
+        new FlyingChar(github, padding_top + 233, 55, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -218,7 +230,7 @@ Interface = {
             'text': 'github.com/l31rb4g',
             'title': 'GitHub'
         });
-        new FlyingChar(github, padding_top + 205, 90, {
+        new FlyingChar(github, padding_top + 240, 90, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -233,7 +245,7 @@ Interface = {
                 'src': 'img/linkedin.jpg'
             })
         );
-        new FlyingChar(linkedin, padding_top + 234, 55, {
+        new FlyingChar(linkedin, padding_top + 269, 55, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -243,7 +255,7 @@ Interface = {
             'text': 'linkedin.com/in/grppaladino',
             'title': 'LinkedIn'
         });
-        new FlyingChar(linkedin, padding_top + 240, 90, {
+        new FlyingChar(linkedin, padding_top + 275, 90, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -258,7 +270,7 @@ Interface = {
                 'src': 'img/facebook.jpg'
             })
         );
-        new FlyingChar(facebook, padding_top + 268, 55, {
+        new FlyingChar(facebook, padding_top + 303, 55, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -268,7 +280,7 @@ Interface = {
             'text': 'facebook.com/grppaladino',
             'title': 'Facebook'
         });
-        new FlyingChar(linkedin, padding_top + 275, 90, {
+        new FlyingChar(linkedin, padding_top + 310, 90, {
             'class': 'h2',
             'spacing': 7
         }).fly();
