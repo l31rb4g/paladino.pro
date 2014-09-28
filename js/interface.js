@@ -2,7 +2,7 @@ Interface = {
 
     //670px minimum window height
 
-    frameSize: {x:1284, y:595},
+    frameSize: {x:1284, y:676},
 
     initialize: function(){
         this.buildFrame();
@@ -45,7 +45,7 @@ Interface = {
         this.margin = margin;
         var cs = Interface.getCharSize('frame');
 
-        frame.addElement('+', margin, margin + this.centerWidth);
+        frame.addElement('+', margin + this.centerHeight, margin + this.centerWidth);
 
         //var qtd_y = Math.ceil((window.getSize().y - (margin * 2)) / 32) - 1;
         var qtd_y = 18;
@@ -55,15 +55,15 @@ Interface = {
         //left 1
         var n1 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n1, margin + this.centerWidth);
+            frame.addElement('|', n1 + this.centerHeight, margin + this.centerWidth);
             n1 += cs.y + 4;
         }
-        frame.addElement('+', n1 - 6, margin + this.centerWidth);
+        frame.addElement('+', n1 - 6 + this.centerHeight, margin + this.centerWidth);
 
         //left 2
         var n1 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n1, margin + 272 + this.centerWidth);
+            frame.addElement('|', n1 + this.centerHeight, margin + 272 + this.centerWidth);
             n1 += cs.y + 4;
         }
 
@@ -79,15 +79,15 @@ Interface = {
                 char = '-';
                 y = 3;
             }
-            frame.addElement(char, margin - y, n2 + this.centerWidth);
+            frame.addElement(char, margin - y + this.centerHeight, n2 + this.centerWidth);
             n2 += cs.x;
         }
-        frame.addElement('+',  margin, n2 + this.centerWidth);
+        frame.addElement('+',  margin + this.centerHeight, n2 + this.centerWidth);
 
         //top2
         var n22 = 310;
         for (var i=0; i<qtd_x-15; i++) {
-            frame.addElement('-', margin + 36, n22 + this.centerWidth);
+            frame.addElement('-', margin + 36 + this.centerHeight, n22 + this.centerWidth);
             n22 += cs.x;
         }
 
@@ -95,10 +95,10 @@ Interface = {
         //right
         var n3 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n3, n2 + this.centerWidth);
+            frame.addElement('|', n3 + this.centerHeight, n2 + this.centerWidth);
             n3 += cs.y + 4;
         }
-        frame.addElement('+', n3 - 6, n2 + this.centerWidth);
+        frame.addElement('+', n3 - 6 + this.centerHeight, n2 + this.centerWidth);
 
         //bottom
         var z;
@@ -111,7 +111,7 @@ Interface = {
                 char = '-';
                 z = 8;
             }
-            frame.addElement(char, n3 - z, n4 + this.centerWidth);
+            frame.addElement(char, n3 - z + this.centerHeight, n4 + this.centerWidth);
             n4 += cs.x;
         }
 
@@ -133,7 +133,7 @@ Interface = {
             var img = new Element('img', {
                 'src': 'img/foto/foto1_r' + r + '_c' + c + '.jpg'
             });
-            obj.addElement(img, this.margin + 44 + stepy, this.margin + 44 + stepx + this.centerWidth);
+            obj.addElement(img, this.margin + 44 + stepy + this.centerHeight, this.margin + 44 + stepx + this.centerWidth);
 
             if (c == 8) {
                 r++;
@@ -302,7 +302,7 @@ Interface = {
             'text': 'Perfil',
             'href': 'javascript:;'
         });
-        new FlyingChar(link, 50, 315 + this.centerWidth).fly();
+        new FlyingChar(link, 50 + this.centerHeight, 315 + this.centerWidth).fly();
     }
 
 };
