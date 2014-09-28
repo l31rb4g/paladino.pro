@@ -2,7 +2,7 @@ Interface = {
 
     //670px minimum window height
 
-    frameSize: 1284,
+    frameSize: {x:1284, y:595},
 
     initialize: function(){
         this.buildFrame();
@@ -39,7 +39,8 @@ Interface = {
         });
 
         var margin = 30;
-        this.centerWidth = ((window.getSize().x - this.frameSize) / 2).toInt();
+        this.centerWidth = ((window.getSize().x - this.frameSize.x) / 2).toInt();
+        this.centerHeight = ((window.getSize().y - this.frameSize.y) / 2).toInt();
 
         this.margin = margin;
         var cs = Interface.getCharSize('frame');
