@@ -35,8 +35,9 @@ Interface = {
 
         frame.addElement('+', margin, margin);
 
-        var qtd_y = ((window.getSize().y - (margin * 2.2)) / 28).toInt() - 4;
-        var qtd_x = ((window.getSize().x - (margin * 2)) / 16).toInt() - 2;
+        var qtd_y = Math.ceil((window.getSize().y - (margin * 2)) / 32) - 1;
+        console.log('wtd', qtd_y)
+        var qtd_x = ((window.getSize().x - (margin * 2)) / 17).toInt() - 3;
 
         //left 1
         var n1 = cs.y + margin - 8;
@@ -54,12 +55,11 @@ Interface = {
         }
 
         //top
-        var z = 7;
         var y = 3;
-        var n2 = cs.x + margin + z;
+        var n2 = cs.x + margin;
         var char;
         for (var i=0; i<qtd_x; i++) {
-            if (i == 16) {
+            if (i == 15) {
                 char = '+';
                 y = 0;
             } else {
@@ -67,7 +67,7 @@ Interface = {
                 y = 3;
             }
             frame.addElement(char, margin - y, n2);
-            n2 += cs.x + z;
+            n2 += cs.x;
         }
         frame.addElement('+',  margin, n2);
 
@@ -80,11 +80,10 @@ Interface = {
         frame.addElement('+', n3 - 6, n2);
 
         //bottom
-        var x = 7;
         var z;
-        var n4 = cs.x + margin + x;
+        var n4 = cs.x + margin;
         for (var i=0; i<qtd_x; i++) {
-            if (i == 16){
+            if (i == 15){
                 char = '+';
                 z = 6;
             } else {
@@ -92,7 +91,7 @@ Interface = {
                 z = 8;
             }
             frame.addElement(char, n3 - z, n4);
-            n4 += cs.x + x;
+            n4 += cs.x;
         }
 
         frame.fly();
