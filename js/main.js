@@ -5,6 +5,8 @@ window.addEvent('domready', function(){
 
 window.addEvent('load', function(){
 
-    Interface.initialize();
+    setTimeout(function() {
+        Interface.initialize();
+    }, 10);
 
 });
