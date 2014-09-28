@@ -2,6 +2,8 @@ Interface = {
 
     //670px minimum window height
 
+    frameSize: 1284,
+
     initialize: function(){
         this.buildFrame();
         setTimeout(function(){
@@ -35,11 +37,14 @@ Interface = {
             'interval': 8,
             'duration': 400
         });
+
         var margin = 30;
+        this.centerWidth = ((window.getSize().x - this.frameSize) / 2).toInt();
+
         this.margin = margin;
         var cs = Interface.getCharSize('frame');
 
-        frame.addElement('+', margin, margin);
+        frame.addElement('+', margin, margin + this.centerWidth);
 
         //var qtd_y = Math.ceil((window.getSize().y - (margin * 2)) / 32) - 1;
         var qtd_y = 18;
@@ -49,15 +54,15 @@ Interface = {
         //left 1
         var n1 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n1, margin);
+            frame.addElement('|', n1, margin + this.centerWidth);
             n1 += cs.y + 4;
         }
-        frame.addElement('+', n1 - 6, margin);
+        frame.addElement('+', n1 - 6, margin + this.centerWidth);
 
         //left 2
         var n1 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n1, margin + 272);
+            frame.addElement('|', n1, margin + 272 + this.centerWidth);
             n1 += cs.y + 4;
         }
 
@@ -73,15 +78,15 @@ Interface = {
                 char = '-';
                 y = 3;
             }
-            frame.addElement(char, margin - y, n2);
+            frame.addElement(char, margin - y, n2 + this.centerWidth);
             n2 += cs.x;
         }
-        frame.addElement('+',  margin, n2);
+        frame.addElement('+',  margin, n2 + this.centerWidth);
 
         //top2
         var n22 = 310;
         for (var i=0; i<qtd_x-15; i++) {
-            frame.addElement('-', margin + 36, n22);
+            frame.addElement('-', margin + 36, n22 + this.centerWidth);
             n22 += cs.x;
         }
 
@@ -89,10 +94,10 @@ Interface = {
         //right
         var n3 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n3, n2);
+            frame.addElement('|', n3, n2 + this.centerWidth);
             n3 += cs.y + 4;
         }
-        frame.addElement('+', n3 - 6, n2);
+        frame.addElement('+', n3 - 6, n2 + this.centerWidth);
 
         //bottom
         var z;
@@ -105,7 +110,7 @@ Interface = {
                 char = '-';
                 z = 8;
             }
-            frame.addElement(char, n3 - z, n4);
+            frame.addElement(char, n3 - z, n4 + this.centerWidth);
             n4 += cs.x;
         }
 
@@ -127,7 +132,7 @@ Interface = {
             var img = new Element('img', {
                 'src': 'img/foto/foto1_r' + r + '_c' + c + '.jpg'
             });
-            obj.addElement(img, this.margin + 44 + stepy, this.margin + 44 + stepx);
+            obj.addElement(img, this.margin + 44 + stepy, this.margin + 44 + stepx + this.centerWidth);
 
             if (c == 8) {
                 r++;
@@ -145,14 +150,14 @@ Interface = {
 
     leftColumn: function(){
 
-        window.gp = new FlyingString('Gabriel Paladino', 290, 78, {
+        window.gp = new FlyingString('Gabriel Paladino', 290, 78 + this.centerWidth, {
             'class': 'h1',
             'spacing': 12,
             'interval': 25,
             'duration': 1200
         }).fly();
 
-        new FlyingString('Senior Software Engineer', 315, 90, {
+        new FlyingString('Senior Software Engineer', 315, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -160,7 +165,7 @@ Interface = {
         var padding_top = 280;
 
         //E-mail
-        new FlyingChar('@', padding_top + 91, 55, {
+        new FlyingChar('@', padding_top + 91, 55 + this.centerWidth, {
             'class': 'arroba',
             'title': 'E-mail'
         }).fly();
@@ -170,7 +175,7 @@ Interface = {
             'text': 'gabriel@paladino.pro',
             'title': 'E-mail'
         });
-        new FlyingChar(email, padding_top + 100, 90, {
+        new FlyingChar(email, padding_top + 100, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'E-mail'
@@ -181,8 +186,8 @@ Interface = {
             'src': 'img/phone.jpg',
             'title': 'Telefone'
         });
-        new FlyingChar(phone, padding_top + 129, 55).fly();
-        new FlyingChar('+55 (21) 98804-7007', padding_top + 135, 90, {
+        new FlyingChar(phone, padding_top + 129, 55 + this.centerWidth).fly();
+        new FlyingChar('+55 (21) 98804-7007', padding_top + 135, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Telefone'
@@ -193,8 +198,8 @@ Interface = {
             'src': 'img/skype.jpg',
             'title': 'Skype'
         });
-        new FlyingChar(skype, padding_top + 164, 55).fly();
-        new FlyingChar('l31rb4g', padding_top + 170, 90, {
+        new FlyingChar(skype, padding_top + 164, 55 + this.centerWidth).fly();
+        new FlyingChar('l31rb4g', padding_top + 170, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Skype'
@@ -205,8 +210,8 @@ Interface = {
             'src': 'img/localization.jpg',
             'title': 'Localização'
         });
-        new FlyingChar(localization, padding_top + 199, 60).fly();
-        new FlyingChar('Rio de Janeiro, RJ, BR', padding_top + 205, 90, {
+        new FlyingChar(localization, padding_top + 199, 60 + this.centerWidth).fly();
+        new FlyingChar('Rio de Janeiro, RJ, BR', padding_top + 205, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Localização'
@@ -222,7 +227,7 @@ Interface = {
                 'src': 'img/blacktocat.jpg'
             })
         );
-        new FlyingChar(github, padding_top + 233, 55, {
+        new FlyingChar(github, padding_top + 233, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -232,7 +237,7 @@ Interface = {
             'text': 'github.com/l31rb4g',
             'title': 'GitHub'
         });
-        new FlyingChar(github, padding_top + 240, 90, {
+        new FlyingChar(github, padding_top + 240, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -247,7 +252,7 @@ Interface = {
                 'src': 'img/linkedin.jpg'
             })
         );
-        new FlyingChar(linkedin, padding_top + 269, 55, {
+        new FlyingChar(linkedin, padding_top + 269, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -257,7 +262,7 @@ Interface = {
             'text': 'linkedin.com/in/grppaladino',
             'title': 'LinkedIn'
         });
-        new FlyingChar(linkedin, padding_top + 275, 90, {
+        new FlyingChar(linkedin, padding_top + 275, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -272,7 +277,7 @@ Interface = {
                 'src': 'img/facebook.jpg'
             })
         );
-        new FlyingChar(facebook, padding_top + 303, 55, {
+        new FlyingChar(facebook, padding_top + 303, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -282,7 +287,7 @@ Interface = {
             'text': 'facebook.com/grppaladino',
             'title': 'Facebook'
         });
-        new FlyingChar(linkedin, padding_top + 310, 90, {
+        new FlyingChar(linkedin, padding_top + 310, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
         }).fly();
@@ -294,7 +299,7 @@ Interface = {
             'text': 'Perfil',
             'href': 'javascript:;'
         });
-        new FlyingChar(link, 50, 315).fly();
+        new FlyingChar(link, 50, 315 + this.centerWidth).fly();
     }
 
 };
