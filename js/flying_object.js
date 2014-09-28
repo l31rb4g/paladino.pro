@@ -30,6 +30,8 @@ FlyingObject = new Class({
             }.bind(this), this.interval * i);
             i++;
         }.bind(this));
+
+        return this;
     },
 
     dispose: function(){
