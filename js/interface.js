@@ -6,10 +6,13 @@ Interface = {
         this.buildFrame();
         setTimeout(function(){
             this.picture();
-        }.bind(this), 1750);
+        }.bind(this), 1200);
         setTimeout(function(){
             this.leftColumn();
         }.bind(this), 850);
+        setTimeout(function(){
+            this.menu();
+        }.bind(this), 2000);
     },
 
     getCharSize: function(cl){
@@ -29,8 +32,8 @@ Interface = {
     buildFrame: function(){
         var frame = new FlyingObject({
             'class': 'frame',
-            'interval': 9,
-            'duration': 500
+            'interval': 8,
+            'duration': 400
         });
         var margin = 30;
         this.margin = margin;
@@ -73,6 +76,14 @@ Interface = {
         }
         frame.addElement('+',  margin, n2);
 
+        //top2
+        var n22 = 310;
+        for (var i=0; i<qtd_x-15; i++) {
+            frame.addElement('-', margin + 36, n22);
+            n22 += cs.x;
+        }
+
+
         //right
         var n3 = cs.y + margin - 8;
         for (var i=0; i<qtd_y; i++) {
@@ -102,7 +113,8 @@ Interface = {
     picture: function(){
         var obj = new FlyingObject({
             'class': 'picture',
-            'duration': 750
+            'duration': 500,
+            interval: 25
         });
         var r = 1;
         var c = 1;
@@ -135,7 +147,7 @@ Interface = {
             'class': 'h1',
             'spacing': 12,
             'interval': 25,
-            'duration': 1000
+            'duration': 1200
         }).fly();
 
         new FlyingString('Senior Software Engineer', 315, 90, {
@@ -261,6 +273,14 @@ Interface = {
             'spacing': 7
         }).fly();
 
+    },
+
+    menu: function(){
+        var link = new Element('a', {
+            'text': 'Perfil',
+            'href': 'javascript:;'
+        });
+        new FlyingChar(link, 50, 320).fly();
     }
 
 };
