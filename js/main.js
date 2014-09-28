@@ -9,4 +9,8 @@ window.addEvent('load', function(){
         Interface.initialize();
     }, 10);
 
+    setTimeout(function(){
+        $('body')[0].setStyle('overflow', 'visible');
+    }, 5000);
+
 });
