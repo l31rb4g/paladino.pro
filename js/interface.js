@@ -1,8 +1,9 @@
 Interface = {
 
-    //670px minimum window height
-
-    frameSize: {x:1284, y:676},
+    frameSize: {
+        x: 1284,
+        y: 676
+    },
 
     initialize: function(){
         this.buildFrame();
