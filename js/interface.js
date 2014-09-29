@@ -45,6 +45,7 @@ Interface = {
 
         this.margin = margin;
         var cs = Interface.getCharSize('frame');
+        console.log('frame cs', cs);
 
         frame.addElement('+', margin + this.centerHeight, margin + this.centerWidth);
 
