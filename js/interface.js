@@ -24,7 +24,8 @@ Interface = {
             'text': '.',
             'styles': {
                 'top': -50,
-                'left': -50
+                'left': -50,
+                'visibility': 'hidden'
             }
         }).inject($$('body')[0]);
         var size = el.getSize();
