@@ -128,30 +128,49 @@ Interface = {
     },
 
     picture: function(){
+        var pieces = 10;
+        var pieceSize = 200 / pieces;
+        if (pieceSize != pieceSize.toInt()){
+            console.log('Invalid piece quantity: ' + pieces);
+            return false;
+        }
+        var r = 1;
+        var c = 1;
+        var stepx = 0;
+        var stepy = 0;
+        var x = 0
+        var y = 0;
+
         var obj = new FlyingObject({
             'class': 'picture',
             'duration': 500,
             interval: 30
         });
-        var r = 1;
-        var c = 1;
-        var stepx = 0;
-        var stepy = 0;
 
-        for (var i=0; i<64; i++) {
-            var img = new Element('img', {
-                'src': 'img/foto/foto1_r' + r + '_c' + c + '.jpg'
+        for (var i=0; i<pieces*pieces; i++) {
+            var img = new Element('span', {
+                'styles': {
+                    'display': 'inline-block',
+                    'width': pieceSize,
+                    'height': pieceSize,
+                    'background': 'url(img/foto.jpg) -' + x + 'px -' + y + 'px no-repeat'
+                }
             });
+
             obj.addElement(img, this.margin + 44 + stepy + this.centerHeight, this.margin + 44 + stepx + this.centerWidth);
 
-            if (c == 8) {
+            x += pieceSize;
+
+            if (c == pieces) {
                 r++;
                 c = 1;
                 stepx = 0;
-                stepy += 25;
+                stepy += pieceSize;
+                y += pieceSize;
+                x = 0;
             } else {
                 c++;
-                stepx += 25;
+                stepx += pieceSize;
             }
         }
 
