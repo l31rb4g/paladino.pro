@@ -128,7 +128,7 @@ Interface = {
     },
 
     picture: function(){
-        var pieces = 10;
+        var pieces = 8;
         var pieceSize = 200 / pieces;
         if (pieceSize != pieceSize.toInt()){
             console.log('Invalid piece quantity: ' + pieces);
