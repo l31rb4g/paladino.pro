@@ -1,5 +1,6 @@
 window.addEvent('domready', function(){
 
+    window.initialCS = Interface.getCharSize('frame');
 
 });
 

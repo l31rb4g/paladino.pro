@@ -7,15 +7,6 @@ Interface = {
 
     initialize: function(){
         this.buildFrame();
-        setTimeout(function(){
-            this.picture();
-        }.bind(this), 1200);
-        setTimeout(function(){
-            this.leftColumn();
-        }.bind(this), 750);
-        setTimeout(function(){
-            this.menu();
-        }.bind(this), 2000);
     },
 
     getCharSize: function(cl){
@@ -34,91 +25,106 @@ Interface = {
     },
 
     buildFrame: function(){
-        var frame = new FlyingObject({
-            'class': 'frame',
-            'interval': 8,
-            'duration': 400
-        });
-
-        var margin = 30;
-        this.centerWidth = ((window.getSize().x - this.frameSize.x) / 2).toInt();
-        this.centerHeight = ((window.getSize().y - this.frameSize.y) / 2).toInt();
-
-        this.margin = margin;
         var cs = Interface.getCharSize('frame');
-        console.log('frame cs', cs);
+        if (window.initialCS.x == cs.x){
+            setTimeout(function(){
+                this.buildFrame();
+            }.bind(this), 100);
+        } else {
+            var frame = new FlyingObject({
+                'class': 'frame',
+                'interval': 8,
+                'duration': 400
+            });
 
-        frame.addElement('+', margin + this.centerHeight, margin + this.centerWidth);
+            var margin = 30;
+            this.centerWidth = ((window.getSize().x - this.frameSize.x) / 2).toInt();
+            this.centerHeight = ((window.getSize().y - this.frameSize.y) / 2).toInt();
 
-        //var qtd_y = Math.ceil((window.getSize().y - (margin * 2)) / 32) - 1;
-        var qtd_y = 18;
-        //var qtd_x = ((window.getSize().x - (margin * 2)) / 17).toInt() - 3;
-        var qtd_x = 70;
+            this.margin = margin;
 
-        //left 1
-        var n1 = cs.y + margin - 8;
-        for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n1 + this.centerHeight, margin + this.centerWidth);
-            n1 += cs.y + 4;
-        }
-        frame.addElement('+', n1 - 6 + this.centerHeight, margin + this.centerWidth);
+            frame.addElement('+', margin + this.centerHeight, margin + this.centerWidth);
 
-        //left 2
-        var n1 = cs.y + margin - 8;
-        for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n1 + this.centerHeight, margin + 272 + this.centerWidth);
-            n1 += cs.y + 4;
-        }
+            //var qtd_y = Math.ceil((window.getSize().y - (margin * 2)) / 32) - 1;
+            var qtd_y = 18;
+            //var qtd_x = ((window.getSize().x - (margin * 2)) / 17).toInt() - 3;
+            var qtd_x = 70;
 
-        //top
-        var y = 3;
-        var n2 = cs.x + margin;
-        var char;
-        for (var i=0; i<qtd_x; i++) {
-            if (i == 15) {
-                char = '+';
-                y = 0;
-            } else {
-                char = '-';
-                y = 3;
+            //left 1
+            var n1 = cs.y + margin - 8;
+            for (var i = 0; i < qtd_y; i++) {
+                frame.addElement('|', n1 + this.centerHeight, margin + this.centerWidth);
+                n1 += cs.y + 4;
             }
-            frame.addElement(char, margin - y + this.centerHeight, n2 + this.centerWidth);
-            n2 += cs.x;
-        }
-        frame.addElement('+',  margin + this.centerHeight, n2 + this.centerWidth);
+            frame.addElement('+', n1 - 6 + this.centerHeight, margin + this.centerWidth);
 
-        //top2
-        var n22 = 310;
-        for (var i=0; i<qtd_x-15; i++) {
-            frame.addElement('-', margin + 36 + this.centerHeight, n22 + this.centerWidth);
-            n22 += cs.x;
-        }
-
-
-        //right
-        var n3 = cs.y + margin - 8;
-        for (var i=0; i<qtd_y; i++) {
-            frame.addElement('|', n3 + this.centerHeight, n2 + this.centerWidth);
-            n3 += cs.y + 4;
-        }
-        frame.addElement('+', n3 - 6 + this.centerHeight, n2 + this.centerWidth);
-
-        //bottom
-        var z;
-        var n4 = cs.x + margin;
-        for (var i=0; i<qtd_x; i++) {
-            if (i == 15){
-                char = '+';
-                z = 6;
-            } else {
-                char = '-';
-                z = 8;
+            //left 2
+            var n1 = cs.y + margin - 8;
+            for (var i = 0; i < qtd_y; i++) {
+                frame.addElement('|', n1 + this.centerHeight, margin + 272 + this.centerWidth);
+                n1 += cs.y + 4;
             }
-            frame.addElement(char, n3 - z + this.centerHeight, n4 + this.centerWidth);
-            n4 += cs.x;
-        }
 
-        frame.fly();
+            //top
+            var y = 3;
+            var n2 = cs.x + margin;
+            var char;
+            for (var i = 0; i < qtd_x; i++) {
+                if (i == 15) {
+                    char = '+';
+                    y = 0;
+                } else {
+                    char = '-';
+                    y = 3;
+                }
+                frame.addElement(char, margin - y + this.centerHeight, n2 + this.centerWidth);
+                n2 += cs.x;
+            }
+            frame.addElement('+', margin + this.centerHeight, n2 + this.centerWidth);
+
+            //top2
+            var n22 = 310;
+            for (var i = 0; i < qtd_x - 15; i++) {
+                frame.addElement('-', margin + 36 + this.centerHeight, n22 + this.centerWidth);
+                n22 += cs.x;
+            }
+
+
+            //right
+            var n3 = cs.y + margin - 8;
+            for (var i = 0; i < qtd_y; i++) {
+                frame.addElement('|', n3 + this.centerHeight, n2 + this.centerWidth);
+                n3 += cs.y + 4;
+            }
+            frame.addElement('+', n3 - 6 + this.centerHeight, n2 + this.centerWidth);
+
+            //bottom
+            var z;
+            var n4 = cs.x + margin;
+            for (var i = 0; i < qtd_x; i++) {
+                if (i == 15) {
+                    char = '+';
+                    z = 6;
+                } else {
+                    char = '-';
+                    z = 8;
+                }
+                frame.addElement(char, n3 - z + this.centerHeight, n4 + this.centerWidth);
+                n4 += cs.x;
+            }
+
+            frame.fly();
+
+            setTimeout(function(){
+                this.picture();
+            }.bind(this), 1200);
+            setTimeout(function(){
+                this.leftColumn();
+            }.bind(this), 750);
+            setTimeout(function(){
+                this.menu();
+            }.bind(this), 2000);
+        }
     },
 
     picture: function(){
