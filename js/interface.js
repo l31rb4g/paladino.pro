@@ -26,6 +26,7 @@ Interface = {
 
     buildFrame: function(){
         var cs = Interface.getCharSize('frame');
+        console.log(cs.x)
         if (window.initialCS.x == cs.x || cs.x == 17){
             setTimeout(function(){
                 this.buildFrame();
