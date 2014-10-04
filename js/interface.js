@@ -117,7 +117,7 @@ Interface = {
 
             setTimeout(function(){
                 this.picture();
-            }.bind(this), 1200);
+            }.bind(this), 0);
             setTimeout(function(){
                 this.leftColumn();
             }.bind(this), 750);
@@ -128,7 +128,7 @@ Interface = {
     },
 
     picture: function(){
-        var pieces = 8;
+        var pieces = 20;
         var pieceSize = 200 / pieces;
         if (pieceSize != pieceSize.toInt()){
             console.log('Invalid piece quantity: ' + pieces);
@@ -144,7 +144,7 @@ Interface = {
         var obj = new FlyingObject({
             'class': 'picture',
             'duration': 500,
-            interval: 30
+            interval: 10
         });
 
         for (var i=0; i<pieces*pieces; i++) {
@@ -179,19 +179,21 @@ Interface = {
 
     leftColumn: function(){
 
-        window.gp = new FlyingString('Gabriel Paladino', 290 + this.centerHeight, 78 + this.centerWidth, {
-            'class': 'h1',
-            'spacing': 12,
-            'interval': 25,
-            'duration': 2000
-        }).fly();
+        setTimeout(function(){
+            window.gp = new FlyingString('Gabriel Paladino', 290 + this.centerHeight, 78 + this.centerWidth, {
+                'class': 'h1',
+                'spacing': 12,
+                'interval': 25,
+                'duration': 2000
+            }).fly();
 
-        new FlyingString('Senior Software Engineer', 315 + this.centerHeight, 90 + this.centerWidth, {
-            'class': 'h2',
-            'spacing': 7,
-            'interval': 25,
-            'duration': 1000
-        }).fly();
+            new FlyingString('Senior Software Engineer', 315 + this.centerHeight, 90 + this.centerWidth, {
+                'class': 'h2',
+                'spacing': 7,
+                'interval': 25,
+                'duration': 1000
+            }).fly();
+        }.bind(this), 1000);
 
         var padding_top = 280;
 
@@ -199,7 +201,7 @@ Interface = {
         new FlyingChar('@', padding_top + 91 + this.centerHeight, 55 + this.centerWidth, {
             'class': 'arroba',
             'title': 'E-mail'
-        }).fly();
+        }).fly(100);
 
         var email = new Element('a', {
             'href': 'mailto:gabriel@paladino.pro',
@@ -210,43 +212,43 @@ Interface = {
             'class': 'h2',
             'spacing': 7,
             'title': 'E-mail'
-        }).fly();
+        }).fly(200);
 
         //Phone
         var phone = new Element('img', {
             'src': 'img/phone.jpg',
             'title': 'Telefone'
         });
-        new FlyingChar(phone, padding_top + 129 + this.centerHeight, 55 + this.centerWidth).fly();
+        new FlyingChar(phone, padding_top + 129 + this.centerHeight, 55 + this.centerWidth).fly(400);
         new FlyingChar('+55 (21) 98804-7007', padding_top + 135 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Telefone'
-        }).fly();
+        }).fly(500);
 
         //Skype
         var skype = new Element('img', {
             'src': 'img/skype.jpg',
             'title': 'Skype'
         });
-        new FlyingChar(skype, padding_top + 164 + this.centerHeight, 55 + this.centerWidth).fly();
+        new FlyingChar(skype, padding_top + 164 + this.centerHeight, 55 + this.centerWidth).fly(700);
         new FlyingChar('l31rb4g', padding_top + 170 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Skype'
-        }).fly();
+        }).fly(800);
 
         //Localization
         var localization = new Element('img', {
             'src': 'img/localization.jpg',
             'title': 'Localização'
         });
-        new FlyingChar(localization, padding_top + 199 + this.centerHeight, 60 + this.centerWidth).fly();
+        new FlyingChar(localization, padding_top + 199 + this.centerHeight, 60 + this.centerWidth).fly(1000);
         new FlyingChar('Rio de Janeiro, RJ, BR', padding_top + 205 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7,
             'title': 'Localização'
-        }).fly();
+        }).fly(1100);
 
         //GitHub
         var github = new Element('a', {
@@ -261,7 +263,7 @@ Interface = {
         new FlyingChar(github, padding_top + 233 + this.centerHeight, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
-        }).fly();
+        }).fly(1300);
         github = new Element('a', {
             'href': 'https://github.com/l31rb4g',
             'target': '_blank',
@@ -271,7 +273,7 @@ Interface = {
         new FlyingChar(github, padding_top + 240 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
-        }).fly();
+        }).fly(1400);
 
         //LinkedIn
         var linkedin = new Element('a', {
@@ -286,7 +288,7 @@ Interface = {
         new FlyingChar(linkedin, padding_top + 269 + this.centerHeight, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
-        }).fly();
+        }).fly(1600);
         linkedin = new Element('a', {
             'href': 'https://www.linkedin.com/in/grppaladino',
             'target': '_blank',
@@ -296,7 +298,7 @@ Interface = {
         new FlyingChar(linkedin, padding_top + 275 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
-        }).fly();
+        }).fly(1700);
 
         //Facebook
         var facebook = new Element('a', {
@@ -311,17 +313,17 @@ Interface = {
         new FlyingChar(facebook, padding_top + 303 + this.centerHeight, 55 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
-        }).fly();
-        linkedin = new Element('a', {
+        }).fly(1900);
+        facebook = new Element('a', {
             'href': 'https://www.facebook.com/grppaladino',
             'target': '_blank',
             'text': 'facebook.com/grppaladino',
             'title': 'Facebook'
         });
-        new FlyingChar(linkedin, padding_top + 310 + this.centerHeight, 90 + this.centerWidth, {
+        new FlyingChar(facebook, padding_top + 310 + this.centerHeight, 90 + this.centerWidth, {
             'class': 'h2',
             'spacing': 7
-        }).fly();
+        }).fly(2000);
 
     },
 

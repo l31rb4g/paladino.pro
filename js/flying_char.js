@@ -4,7 +4,7 @@ FlyingChar = new Class({
 
     options: {
         title: null,
-        duration: 500
+        duration: 800
     },
 
     morph: {
@@ -43,10 +43,24 @@ FlyingChar = new Class({
     },
 
     fly: function(){
-        this.el.morph({
-            'top': this.top,
-            'left': this.left
-        });
+        var delay = false;
+        if (arguments.length > 0){
+            delay = arguments[0];
+        }
+
+        if (delay) {
+            setTimeout(function() {
+                this.el.morph({
+                    'top': this.top,
+                    'left': this.left
+                });
+            }.bind(this), delay);
+        } else {
+            this.el.morph({
+                'top': this.top,
+                'left': this.left
+            });
+        }
     },
 
     getRandomOutOfScreenPositions: function(){
