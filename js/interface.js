@@ -328,11 +328,11 @@ Interface = {
     },
 
     menu: function(){
-        var link = new Element('a', {
+        /*var link = new Element('a', {
             'text': 'Perfil',
             'href': 'javascript:;'
         });
-        new FlyingChar(link, 50 + this.centerHeight, 315 + this.centerWidth).fly();
+        new FlyingChar(link, 50 + this.centerHeight, 315 + this.centerWidth).fly();*/
     }
 
 };
