@@ -133,6 +133,9 @@ Interface = {
             setTimeout(function(){
                 this.projects();
             }.bind(this), 3000);
+            setTimeout(function(){
+                this.courses();
+            }.bind(this), 3500);
         }
     },
 
@@ -571,6 +574,63 @@ Interface = {
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
         el.tween('top', 70 + this.centerHeight);
+    },
+
+    courses: function(){
+        var el = new Element('div', {
+            'styles': {
+                'position': 'absolute',
+                'top': 450 + this.centerHeight,
+                'left': -500
+            }
+        }).adopt(
+            new Element('h1', {'text': 'Cursos e treinamentos', 'class': 'idiom'}),
+            new Element('ul', {'class': 'courses'}).adopt(
+                new Element('li').adopt(
+                    new Element('div', {
+                        'html': 'Lean Kanban - Knowledge21<br>realizado em 2014'
+                    }),
+                    new Element('a', {
+                        'href': 'http://edu.leankanban.com/users/gabriel-paladino',
+                        'target': '_blank'
+                    }).adopt(
+                        new Element('img', {
+                            'src': '/img/external.png'
+                        })
+                    )
+                ),
+                new Element('li').adopt(
+                    new Element('div', {
+                        'html': 'Welcome to the Django - Henrique Bastos<br>realizado em 2013'
+                    }),
+                    new Element('a', {
+                        'href': 'http://welcometothedjango.com.br/',
+                        'target': '_blank'
+                    }).adopt(
+                        new Element('img', {
+                            'src': '/img/external.png'
+                        })
+                    )
+                ),
+                new Element('li').adopt(
+                    new Element('div', {
+                        'html': 'Introdução ao Scrum - Rodrigo de Toledo<br>realizado em 2010'
+                    }),
+                    new Element('a', {
+                        'href': 'http://www.rodrigodetoledo.com/',
+                        'target': '_blank'
+                    }).adopt(
+                        new Element('img', {
+                            'src': '/img/external.png'
+                        })
+                    )
+                )
+            )
+        );
+
+        el.inject($$('body')[0]);
+        el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
+        el.tween('left', 920 + this.centerWidth);
     }
 
 };

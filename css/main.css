@@ -97,3 +97,18 @@ a:hover {
 .job.project > div:nth-child(3).description.more {
     width: 277px;
 }
+.coursrs {
+    margin: 0;
+    padding: 0;
+}
+.courses li {
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 14px;
+}
+.courses li a img {
+    position: absolute;
+    width: 16px;
+    margin-top: -14px;
+    margin-left: 125px;
+}
