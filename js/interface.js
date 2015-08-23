@@ -571,8 +571,6 @@ Interface = {
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
         el.tween('top', 70 + this.centerHeight);
-    },
-
-    cursos
+    }
 
 };
