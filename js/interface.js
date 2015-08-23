@@ -122,11 +122,11 @@ Interface = {
                 this.leftColumn();
             }.bind(this), 750);
             setTimeout(function(){
-                this.experience();
-            }.bind(this), 3000);
-            setTimeout(function(){
                 this.skills();
-            }.bind(this), 3500);
+            }.bind(this), 2200);
+            setTimeout(function(){
+                this.experience();
+            }.bind(this), 2500);
         }
     },
 
@@ -350,7 +350,7 @@ Interface = {
             'styles': {
                 'position': 'absolute',
                 'top': -1000,
-                'left': 630 + this.centerWidth
+                'left': 635 + this.centerWidth
             }
         }).adopt(
             new Element('h1', {'text': 'Experiência profissional'}),
@@ -413,38 +413,34 @@ Interface = {
             )
         );
         el.inject($$('body')[0]);
-        el.set('tween', {'duration': 2000});
+        el.set('tween', {'duration': 1500, transition: Fx.Transitions.Cubic.easeOut});
         el.tween('top', 70 + this.centerHeight);
     },
 
     skills: function(){
         var skills = [
-            ['Python', 90],
-            ['PHP', 92],
-            ['Java', 15],
+            ['Python', 92],
+            ['PHP', 94],
             ['Javascript', 96],
-            ['Shell/bash', 75],
-            ['HTML 5', 94],
+            ['Shell/bash', 78],
+            ['HTML 5', 90],
             ['CSS 3', 85],
             ['jQuery', 98],
             ['MooTools', 97],
-            ['Django', 80],
-            ['CakePHP', 85],
-            ['Boootstrap', 50],
-            ['Amazon Web Services', 65],
-            ['Scrum', 95],
-            ['Kanban', 50]
+            ['Django', 84],
+            ['CakePHP', 88],
+            ['Amazon Web Services', 79],
+            ['Scrum', 95]
         ];
-        this.shuffle(skills);
-        /*skills.sort(function (a, b) {
-            console.log(a, b);
+        //this.shuffle(skills);
+        skills.sort(function (a, b) {
             return b[1] - a[1];
-        });*/
+        });
         var el = new Element('div', {
             'styles': {
                 'position': 'absolute',
-                'top': -1000,
-                'left': 340 + this.centerWidth
+                'top': 70 + this.centerHeight,
+                'left': window.getSize().x + this.centerWidth
             }
         }).adopt(
             new Element('h1', {'text': 'Skills'}),
@@ -457,9 +453,27 @@ Interface = {
                 )
             ).inject(el.getElement('.skills'));
         });
+
+        el.adopt(
+            new Element('h1', {'text': 'Idiomas', 'class': 'idiom'}),
+            new Element('div', {'class': 'skills idioms'})
+        );
+        var idioms = [
+            ['Português', 98],
+            ['English', 85],
+            ['Español', 40]
+        ];
+        idioms.each(function(idiom){
+            new Element('div', {'text': idiom[0]}).adopt(
+                new Element('div', {'class': 'progressbar'}).adopt(
+                    new Element('div', {'styles': {'width': idiom[1] + '%'}})
+                )
+            ).inject(el.getElement('.idioms'));
+        });
+
         el.inject($$('body')[0]);
-        el.set('tween', {'duration': 2000});
-        el.tween('top', 70 + this.centerHeight);
+        el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
+        el.tween('left', 340 + this.centerWidth);
     }
 
 };
