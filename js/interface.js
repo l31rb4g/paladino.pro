@@ -361,7 +361,7 @@ Interface = {
         }).adopt(
             new Element('h1', {'text': 'Experiência profissional'}),
             new Element('div', {'class': 'job'}).adopt(
-                new Element('div').adopt(
+                new Element('a', {'href': 'http://br.pearson.com/', 'target': '_blank'}).adopt(
                     new Element('img', {
                         'src': '/img/pearson.png',
                         'styles': {
@@ -376,7 +376,7 @@ Interface = {
                 )
             ),
             new Element('div', {'class': 'job'}).adopt(
-                new Element('div').adopt(
+                new Element('a', {'href': 'http://www.ingresso.com/', 'target': '_blank'}).adopt(
                     new Element('img', {
                         'src': '/img/ingresso.png',
                         'styles': {
@@ -391,7 +391,7 @@ Interface = {
                 )
             ),
             new Element('div', {'class': 'job'}).adopt(
-                new Element('div').adopt(
+                new Element('a', {'href': 'http://www.ezlearn.com.br/', 'target': '_blank'}).adopt(
                     new Element('img', {
                         'src': '/img/ezlearn.png',
                         'styles': {
@@ -406,7 +406,7 @@ Interface = {
                 )
             ),
             new Element('div', {'class': 'job'}).adopt(
-                new Element('div').adopt(
+                new Element('a', {'href': 'http://www.rjhost.com.br/', 'target': '_blank'}).adopt(
                     new Element('img', {
                         'src': '/img/rjhost.gif'
                     })
@@ -464,9 +464,18 @@ Interface = {
                 )
             ).inject(el.getElement('.skills'));
         });
+
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
         el.tween('left', 335 + this.centerWidth);
+
+        setTimeout(function(){
+            el.getElements('.progressbar').each(function(el){
+                var w = el.getElement('div').getSize().x;
+                el.getElement('div').setStyle('width', 0).addClass('full');
+                el.getElement('div').tween('width', w);
+            });
+        }, 500);
     },
 
     idioms: function(){
@@ -496,6 +505,14 @@ Interface = {
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
         el.tween('left', 620 + this.centerWidth);
+
+        setTimeout(function(){
+            el.getElements('.progressbar').each(function(el){
+                var w = el.getElement('div').getSize().x;
+                el.getElement('div').setStyle('width', 0).addClass('full');
+                el.getElement('div').tween('width', w);
+            });
+        }, 1000);
     },
 
     projects: function(){
@@ -508,7 +525,7 @@ Interface = {
         }).adopt(
             new Element('h1', {'text': 'Projetos'}),
             new Element('div', {'class': 'job project'}).adopt(
-                new Element('div').adopt(
+                new Element('a', {'href': 'http://plus.wizard.com.br/', 'target': '_blank'}).adopt(
                     new Element('img', {
                         'src': '/img/wizard-plus.png',
                         'styles': {
@@ -529,7 +546,7 @@ Interface = {
                 })
             ),
             new Element('div', {'class': 'job project', 'styles': {'margin-top': 30}}).adopt(
-                new Element('div').adopt(
+                new Element('a', {'href': 'http://www.meuingles.com/', 'target': '_blank'}).adopt(
                     new Element('img', {
                         'src': '/img/meuingles.png',
                         'styles': {
@@ -554,6 +571,8 @@ Interface = {
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
         el.tween('top', 70 + this.centerHeight);
-    }
+    },
+
+    cursos
 
 };

@@ -39,10 +39,10 @@ a:hover {
     margin-top: 10px;
     overflow: hidden;
 }
-.job > div {
+.job > div, .job > a {
     float: left;
 }
-.job > div:first-child {
+.job > a {
     border: 1px solid #ccc;
     width: 80px;
     height: 80px;
@@ -75,8 +75,10 @@ a:hover {
     border-radius: 4px;
 }
 .progressbar > div {
-    background: #6f6;
     height: 100%;
+}
+.progressbar > div.full {
+    background: #6f6;
 }
 .idiom {
     margin-top: 30px;
