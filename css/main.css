@@ -51,7 +51,7 @@ a:hover {
     margin-left: 5px;
     line-height: 23px;
     margin-top: 5px;
-    width: 220px;
+    width: 216px;
 }
 .job > div:nth-child(2) div:not('.company') {
     font-size: 12px;
