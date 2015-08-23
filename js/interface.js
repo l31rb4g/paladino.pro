@@ -350,7 +350,7 @@ Interface = {
             'styles': {
                 'position': 'absolute',
                 'top': -1000,
-                'left': 650 + this.centerWidth
+                'left': 630 + this.centerWidth
             }
         }).adopt(
             new Element('h1', {'text': 'Experiência profissional'}),
