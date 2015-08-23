@@ -356,7 +356,7 @@ Interface = {
             'styles': {
                 'position': 'absolute',
                 'top': -1000,
-                'left': 635 + this.centerWidth
+                'left': 920 + this.centerWidth
             }
         }).adopt(
             new Element('h1', {'text': 'Experiência profissional'}),
@@ -466,7 +466,7 @@ Interface = {
         });
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
-        el.tween('left', 340 + this.centerWidth);
+        el.tween('left', 335 + this.centerWidth);
     },
 
     idioms: function(){
@@ -495,7 +495,7 @@ Interface = {
 
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
-        el.tween('left', 635 + this.centerWidth);
+        el.tween('left', 620 + this.centerWidth);
     },
 
     projects: function(){
@@ -503,14 +503,51 @@ Interface = {
             'styles': {
                 'position': 'absolute',
                 'top': window.getSize().y + this.centerHeight,
-                'left': 980 + this.centerWidth
+                'left': 620 + this.centerWidth
             }
         }).adopt(
             new Element('h1', {'text': 'Projetos'}),
-            new Element('div', {'class': 'skills'}).adopt(
-                new Element('div', {'text': 'Meuinglês'}).adopt(
-
-                )
+            new Element('div', {'class': 'job project'}).adopt(
+                new Element('div').adopt(
+                    new Element('img', {
+                        'src': '/img/wizard-plus.png',
+                        'styles': {
+                            'margin-top': 27
+                        }
+                    })
+                ),
+                new Element('div').adopt(
+                    new Element('div', {'text': 'Wizard Plus', 'class': 'company'}),
+                    new Element('div', {
+                        'class': 'description',
+                        'text': 'O Wizard Plus é o primeiro produto no mundo de Blended Learning, ou seja, ensino de idiomas que utiliza uma'
+                    })
+                ),
+                new Element('div', {
+                    'class': 'description more',
+                    'text': 'plataforma adaptativa para personalizar as atividades dos alunos, incluindo a utilização de aplicativos para dispositivos móveis próprios e exclusivos em sala de aula.'
+                })
+            ),
+            new Element('div', {'class': 'job project', 'styles': {'margin-top': 30}}).adopt(
+                new Element('div').adopt(
+                    new Element('img', {
+                        'src': '/img/meuingles.png',
+                        'styles': {
+                            'margin-top': 23
+                        }
+                    })
+                ),
+                new Element('div').adopt(
+                    new Element('div', {'text': 'Meuinglês', 'class': 'company'}),
+                    new Element('div', {
+                        'class': 'description',
+                        'text': 'O Meuinglês utiliza a metodologia “Communicative Language Teaching”, focada na comunicação. O aprendi-'
+                    })
+                ),
+                new Element('div', {
+                    'class': 'description more',
+                    'text': 'zado do idioma acontece através da interação e da execução de atividades simples com objetivos bem definidos. São aulas e conteúdos com situações do dia a dia, tanto para a vida pessoal quanto para a vida profissional.'
+                })
             )
         );
 
