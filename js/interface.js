@@ -461,7 +461,7 @@ Interface = {
         var idioms = [
             ['Português', 98],
             ['English', 85],
-            ['Español', 40]
+            ['Español', 35] 
         ];
         idioms.each(function(idiom){
             new Element('div', {'text': idiom[0]}).adopt(
