@@ -135,7 +135,7 @@ Interface = {
             }.bind(this), 3000);
             setTimeout(function(){
                 this.courses();
-            }.bind(this), 3500);
+            }.bind(this), 4000);
         }
     },
 
