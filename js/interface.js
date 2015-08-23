@@ -83,11 +83,11 @@ Interface = {
             frame.addElement('+', margin + this.centerHeight, n2 + this.centerWidth);
 
             //top2
-            var n22 = 310;
+            /*var n22 = 310;
             for (var i = 0; i < qtd_x - 15; i++) {
                 frame.addElement('-', margin + 36 + this.centerHeight, n22 + this.centerWidth);
                 n22 += cs.x;
-            }
+            }*/
 
 
             //right
@@ -122,9 +122,22 @@ Interface = {
                 this.leftColumn();
             }.bind(this), 750);
             setTimeout(function(){
-                this.menu();
-            }.bind(this), 2000);
+                this.experience();
+            }.bind(this), 3000);
+            setTimeout(function(){
+                this.skills();
+            }.bind(this), 3500);
         }
+    },
+
+    shuffle: function(sourceArray){
+        for (var n = 0; n < sourceArray.length - 1; n++) {
+            var k = n + Math.floor(Math.random() * (sourceArray.length - n));
+            var temp = sourceArray[k];
+            sourceArray[k] = sourceArray[n];
+            sourceArray[n] = temp;
+        }
+        return sourceArray;
     },
 
     picture: function(){
@@ -147,13 +160,18 @@ Interface = {
             interval: 10
         });
 
+        var n = '';
+        if (Math.round(Math.random() * 100) >= 50){
+            n = '2';
+        }
+
         for (var i=0; i<pieces*pieces; i++) {
             var img = new Element('span', {
                 'styles': {
                     'display': 'inline-block',
                     'width': pieceSize,
                     'height': pieceSize,
-                    'background': 'url(img/foto.jpg) -' + x + 'px -' + y + 'px no-repeat'
+                    'background': 'url(img/foto' + n + '.jpg) -' + x + 'px -' + y + 'px no-repeat'
                 }
             });
 
@@ -327,12 +345,119 @@ Interface = {
 
     },
 
-    menu: function(){
-        /*var link = new Element('a', {
-            'text': 'Perfil',
-            'href': 'javascript:;'
+    experience: function(){
+        var el = new Element('div', {
+            'styles': {
+                'position': 'absolute',
+                'top': -1000,
+                'left': 650 + this.centerWidth
+            }
+        }).adopt(
+            new Element('h1', {'text': 'Experiência profissional'}),
+            new Element('div', {'class': 'job'}).adopt(
+                new Element('div').adopt(
+                    new Element('img', {
+                        'src': '/img/pearson.png',
+                        'styles': {
+                            'margin-top': 27
+                        }
+                    })
+                ),
+                new Element('div').adopt(
+                    new Element('div', {'text': 'Pearson', 'class': 'company'}),
+                    new Element('div', {'text': 'Senior Software Engineer'}),
+                    new Element('div', {'text': 'junho/2014 - atualmente'})
+                )
+            ),
+            new Element('div', {'class': 'job'}).adopt(
+                new Element('div').adopt(
+                    new Element('img', {
+                        'src': '/img/ingresso.png',
+                        'styles': {
+                            'margin-top': 20
+                        }
+                    })
+                ),
+                new Element('div').adopt(
+                    new Element('div', {'text': 'Ingresso.com', 'class': 'company'}),
+                    new Element('div', {'text': 'Javascript specialist'}),
+                    new Element('div', {'text': 'fevereiro/2012 - maio/2012'})
+                )
+            ),
+            new Element('div', {'class': 'job'}).adopt(
+                new Element('div').adopt(
+                    new Element('img', {
+                        'src': '/img/ezlearn.png',
+                        'styles': {
+                            'margin-top': 16
+                        }
+                    })
+                ),
+                new Element('div').adopt(
+                    new Element('div', {'text': 'ezLearn Educacional', 'class': 'company'}),
+                    new Element('div', {'text': 'Software Engineer'}),
+                    new Element('div', {'text': 'julho/2010 - junho/2014'})
+                )
+            ),
+            new Element('div', {'class': 'job'}).adopt(
+                new Element('div').adopt(
+                    new Element('img', {
+                        'src': '/img/rjhost.gif'
+                    })
+                ),
+                new Element('div').adopt(
+                    new Element('div', {'text': 'RJHost Soluções de Internet', 'class': 'company'}),
+                    new Element('div', {'text': 'Web Developer'}),
+                    new Element('div', {'text': 'julho/2007 - agosto/2009'})
+                )
+            )
+        );
+        el.inject($$('body')[0]);
+        el.set('tween', {'duration': 2000});
+        el.tween('top', 70 + this.centerHeight);
+    },
+
+    skills: function(){
+        var skills = {
+            'Python': 90,
+            'PHP': 92,
+            'Java': 15,
+            'Javascript': 96,
+            'Shell/bash': 75,
+            'HTML 5': 94,
+            'CSS 3': 85,
+            'jQuery': 98,
+            'MooTools': 97,
+            'Django': 80,
+            'CakePHP': 80,
+            'Boootstrap': 50,
+            'Amazon Web Services': 60,
+            'Scrum': 95,
+            'Kanban': 60
+        };
+        console.log(skills);
+        var skills2 = this.shuffle(skills);
+        console.log(skills2);
+        var el = new Element('div', {
+            'styles': {
+                'position': 'absolute',
+                'top': -1000,
+                'left': 340 + this.centerWidth
+            }
+        }).adopt(
+            new Element('h1', {'text': 'Skills'}),
+            new Element('div', {'class': 'skills'})
+        );
+        Object.each(skills, function(v, lang){
+            new Element('div', {'text': lang}).adopt(
+                new Element('div', {'class': 'progressbar'}).adopt(
+                    new Element('div', {'styles': {'width': v + '%'}})
+                )
+            ).inject(el.getElement('.skills'));
         });
-        new FlyingChar(link, 50 + this.centerHeight, 315 + this.centerWidth).fly();*/
+        el.inject($$('body')[0]);
+        el.set('tween', {'duration': 2000});
+        el.tween('top', 70 + this.centerHeight);
     }
 
 };

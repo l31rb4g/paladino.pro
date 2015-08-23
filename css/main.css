@@ -34,3 +34,44 @@ a:hover {
     font-family: arial, sans-serif;
     font-size: 26px;
 }
+.job {
+    font-size: 14px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.job > div {
+    float: left;
+}
+.job > div:first-child {
+    border: 1px solid #ccc;
+    width: 80px;
+    height: 80px;
+}
+.job > div:nth-child(2) {
+    margin-left: 5px;
+    line-height: 20px;
+    margin-top: 10px;
+}
+.job img {
+    width: 100%;
+}
+.company {
+    font-weight: bold;
+}
+.skills {
+    margin-top: 10px;
+    font-size: 12px;
+}
+.skills > div {
+    margin-top: 6px;
+}
+.progressbar {
+    border: 1px solid #ccc;
+    height: 8px;
+    width: 250px;
+    border-radius: 4px;
+}
+.progressbar > div {
+    background: #6f6;
+    height: 100%;
+}
