@@ -131,12 +131,12 @@ Interface = {
     },
 
     shuffle: function(sourceArray){
-        for (var n = 0; n < sourceArray.length - 1; n++) {
+        sourceArray.each(function(el, n){
             var k = n + Math.floor(Math.random() * (sourceArray.length - n));
             var temp = sourceArray[k];
             sourceArray[k] = sourceArray[n];
             sourceArray[n] = temp;
-        }
+        });
         return sourceArray;
     },
 
@@ -418,26 +418,28 @@ Interface = {
     },
 
     skills: function(){
-        var skills = {
-            'Python': 90,
-            'PHP': 92,
-            'Java': 15,
-            'Javascript': 96,
-            'Shell/bash': 75,
-            'HTML 5': 94,
-            'CSS 3': 85,
-            'jQuery': 98,
-            'MooTools': 97,
-            'Django': 80,
-            'CakePHP': 80,
-            'Boootstrap': 50,
-            'Amazon Web Services': 60,
-            'Scrum': 95,
-            'Kanban': 60
-        };
-        console.log(skills);
-        var skills2 = this.shuffle(skills);
-        console.log(skills2);
+        var skills = [
+            ['Python', 90],
+            ['PHP', 92],
+            ['Java', 15],
+            ['Javascript', 96],
+            ['Shell/bash', 75],
+            ['HTML 5', 94],
+            ['CSS 3', 85],
+            ['jQuery', 98],
+            ['MooTools', 97],
+            ['Django', 80],
+            ['CakePHP', 85],
+            ['Boootstrap', 50],
+            ['Amazon Web Services', 65],
+            ['Scrum', 95],
+            ['Kanban', 50]
+        ];
+        this.shuffle(skills);
+        /*skills.sort(function (a, b) {
+            console.log(a, b);
+            return b[1] - a[1];
+        });*/
         var el = new Element('div', {
             'styles': {
                 'position': 'absolute',
@@ -448,10 +450,10 @@ Interface = {
             new Element('h1', {'text': 'Skills'}),
             new Element('div', {'class': 'skills'})
         );
-        Object.each(skills, function(v, lang){
-            new Element('div', {'text': lang}).adopt(
+        skills.each(function(lang){
+            new Element('div', {'text': lang[0]}).adopt(
                 new Element('div', {'class': 'progressbar'}).adopt(
-                    new Element('div', {'styles': {'width': v + '%'}})
+                    new Element('div', {'styles': {'width': lang[1] + '%'}})
                 )
             ).inject(el.getElement('.skills'));
         });
