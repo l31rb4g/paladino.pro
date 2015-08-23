@@ -49,8 +49,8 @@ a:hover {
 }
 .job > div:nth-child(2) {
     margin-left: 5px;
-    line-height: 20px;
-    margin-top: 10px;
+    line-height: 23px;
+    margin-top: 5px;
 }
 .job img {
     width: 100%;

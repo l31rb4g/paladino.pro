@@ -127,6 +127,12 @@ Interface = {
             setTimeout(function(){
                 this.experience();
             }.bind(this), 2500);
+            setTimeout(function(){
+                this.idioms();
+            }.bind(this), 2500);
+            setTimeout(function(){
+                this.projects();
+            }.bind(this), 3000);
         }
     },
 
@@ -422,15 +428,20 @@ Interface = {
             ['Python', 92],
             ['PHP', 94],
             ['Javascript', 96],
-            ['Shell/bash', 78],
+            ['Shell/bash', 86],
             ['HTML 5', 90],
             ['CSS 3', 85],
             ['jQuery', 98],
             ['MooTools', 97],
             ['Django', 84],
             ['CakePHP', 88],
-            ['Amazon Web Services', 79],
-            ['Scrum', 95]
+            ['Amazon Web Services', 83],
+            ['Scrum', 95],
+            ['Cordova/Phonegap', 85],
+            ['Jenkins', 80],
+            ['SQL', 85],
+            ['Linux', 92],
+            ['Window', 88]
         ];
         //this.shuffle(skills);
         skills.sort(function (a, b) {
@@ -453,15 +464,26 @@ Interface = {
                 )
             ).inject(el.getElement('.skills'));
         });
+        el.inject($$('body')[0]);
+        el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
+        el.tween('left', 340 + this.centerWidth);
+    },
 
-        el.adopt(
+    idioms: function(){
+        var el = new Element('div', {
+            'styles': {
+                'position': 'absolute',
+                'top': 450 + this.centerHeight,
+                'left': -1000
+            }
+        }).adopt(
             new Element('h1', {'text': 'Idiomas', 'class': 'idiom'}),
             new Element('div', {'class': 'skills idioms'})
         );
         var idioms = [
             ['Português', 98],
             ['English', 85],
-            ['Español', 35] 
+            ['Español', 35]
         ];
         idioms.each(function(idiom){
             new Element('div', {'text': idiom[0]}).adopt(
@@ -473,7 +495,28 @@ Interface = {
 
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
-        el.tween('left', 340 + this.centerWidth);
+        el.tween('left', 635 + this.centerWidth);
+    },
+
+    projects: function(){
+        var el = new Element('div', {
+            'styles': {
+                'position': 'absolute',
+                'top': window.getSize().y + this.centerHeight,
+                'left': 980 + this.centerWidth
+            }
+        }).adopt(
+            new Element('h1', {'text': 'Projetos'}),
+            new Element('div', {'class': 'skills'}).adopt(
+                new Element('div', {'text': 'Meuinglês'}).adopt(
+
+                )
+            )
+        );
+
+        el.inject($$('body')[0]);
+        el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
+        el.tween('top', 70 + this.centerHeight);
     }
 
 };
