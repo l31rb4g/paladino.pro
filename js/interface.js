@@ -588,7 +588,7 @@ Interface = {
             new Element('ul', {'class': 'courses'}).adopt(
                 new Element('li').adopt(
                     new Element('div', {
-                        'html': 'Lean Kanban, por Knowledge21<br>realizado em 2014'
+                        'html': 'Lean Kanban - Knowledge21<br>realizado em 2014'
                     }),
                     new Element('a', {
                         'href': 'http://edu.leankanban.com/users/gabriel-paladino',
@@ -601,7 +601,7 @@ Interface = {
                 ),
                 new Element('li').adopt(
                     new Element('div', {
-                        'html': 'Welcome to the Django, por Henrique Bastos<br>realizado em 2013'
+                        'html': 'Welcome to the Django - Henrique Bastos<br>realizado em 2013'
                     }),
                     new Element('a', {
                         'href': 'http://welcometothedjango.com.br/',
@@ -614,7 +614,7 @@ Interface = {
                 ),
                 new Element('li').adopt(
                     new Element('div', {
-                        'html': 'Scrum, por Rodrigo de Toledo<br>realizado em 2010'
+                        'html': 'Scrum - Rodrigo de Toledo<br>realizado em 2010'
                     }),
                     new Element('a', {
                         'href': 'http://www.rodrigodetoledo.com/',
