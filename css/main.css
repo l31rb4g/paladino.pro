@@ -38,6 +38,7 @@ a:hover {
     font-size: 14px;
     margin-top: 10px;
     overflow: hidden;
+    width: 317px;
 }
 .job > div, .job > a {
     float: left;
