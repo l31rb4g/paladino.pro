@@ -102,18 +102,23 @@ a:hover {
 .job.project > div:nth-child(3).description.more {
     width: 277px;
 }
-.coursrs {
-    margin: 0;
-    padding: 0;
+.courses {
+    margin-top: 18px;
 }
-.courses li {
+.courses > a {
+    display: block;
     font-size: 12px;
-    margin-top: 10px;
+    margin-top: 14px;
     line-height: 14px;
+    color: #333;
+    text-decoration: none;
 }
-.courses li a img {
+.courses > a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+.courses a img {
     position: absolute;
     width: 14px;
-    margin-top: -13px;
-    margin-left: 125px;
+    margin-left: 8px;
 }

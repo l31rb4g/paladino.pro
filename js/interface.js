@@ -586,45 +586,50 @@ Interface = {
             }
         }).adopt(
             new Element('h1', {'text': 'Cursos e treinamentos', 'class': 'idiom'}),
-            new Element('ul', {'class': 'courses'}).adopt(
-                new Element('li').adopt(
-                    new Element('div', {
-                        'html': 'Lean Kanban - Knowledge21<br>realizado em 2014'
+            new Element('div', {'class': 'courses'}).adopt(
+                new Element('a', {
+                    'href': 'http://www.knowledge21.com.br/treinamentos/curso/testes-automatizados-com-praticas-ageis/',
+                    'target': '_blank'
+                }).adopt(
+                    new Element('span', {
+                        'text': 'Testes Automatizados com Práticas Ágeis'
                     }),
-                    new Element('a', {
-                        'href': 'http://edu.leankanban.com/users/gabriel-paladino',
-                        'target': '_blank'
-                    }).adopt(
-                        new Element('img', {
-                            'src': '/img/external.png'
-                        })
-                    )
+                    new Element('img', {
+                        'src': '/img/external.png'
+                    })
                 ),
-                new Element('li').adopt(
-                    new Element('div', {
-                        'html': 'Welcome to the Django - Henrique Bastos<br>realizado em 2013'
+                new Element('a', {
+                    'href': 'http://edu.leankanban.com/users/gabriel-paladino',
+                    'target': '_blank'
+                }).adopt(
+                    new Element('span', {
+                        'text': 'Lean Kanban'
                     }),
-                    new Element('a', {
-                        'href': 'http://welcometothedjango.com.br/',
-                        'target': '_blank'
-                    }).adopt(
-                        new Element('img', {
-                            'src': '/img/external.png'
-                        })
-                    )
+                    new Element('img', {
+                        'src': '/img/external.png'
+                    })
                 ),
-                new Element('li').adopt(
-                    new Element('div', {
-                        'html': 'Scrum - Rodrigo de Toledo<br>realizado em 2010'
+                new Element('a', {
+                    'href': 'http://welcometothedjango.com.br/',
+                    'target': '_blank'
+                }).adopt(
+                    new Element('span', {
+                        'text': 'Welcome to the Django'
                     }),
-                    new Element('a', {
-                        'href': 'http://www.rodrigodetoledo.com/',
-                        'target': '_blank'
-                    }).adopt(
-                        new Element('img', {
-                            'src': '/img/external.png'
-                        })
-                    )
+                    new Element('img', {
+                        'src': '/img/external.png'
+                    })
+                ),
+                new Element('a', {
+                    'href': 'http://www.rodrigodetoledo.com/',
+                    'target': '_blank'
+                }).adopt(
+                    new Element('span', {
+                        'text': 'Scrum'
+                    }),
+                    new Element('img', {
+                        'src': '/img/external.png'
+                    })
                 )
             )
         );
