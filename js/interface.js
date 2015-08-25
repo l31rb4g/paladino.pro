@@ -598,6 +598,7 @@ Interface = {
                         'src': '/img/external.png'
                     })
                 ),
+                new Element('br'),
                 new Element('a', {
                     'href': 'http://edu.leankanban.com/users/gabriel-paladino',
                     'target': '_blank'
@@ -609,6 +610,7 @@ Interface = {
                         'src': '/img/external.png'
                     })
                 ),
+                new Element('br'),
                 new Element('a', {
                     'href': 'http://welcometothedjango.com.br/',
                     'target': '_blank'
@@ -620,6 +622,7 @@ Interface = {
                         'src': '/img/external.png'
                     })
                 ),
+                new Element('br'),
                 new Element('a', {
                     'href': 'http://www.rodrigodetoledo.com/',
                     'target': '_blank'
