@@ -444,7 +444,8 @@ Interface = {
             ['Jenkins', 80],
             ['SQL', 85],
             ['Linux', 92],
-            ['Windows', 88]
+            ['Windows', 88],
+            ['Git', 95]
         ];
         //this.shuffle(skills);
         skills.sort(function (a, b) {

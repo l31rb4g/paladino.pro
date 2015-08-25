@@ -68,7 +68,10 @@ a:hover {
     font-size: 12px;
 }
 .skills > div {
-    margin-top: 8px;
+    margin-top: 7px;
+}
+.skills.idioms > div {
+    margin-top: 16px;
 }
 .progressbar {
     border: 1px solid #ccc;
