@@ -441,7 +441,7 @@ Interface = {
             ['Amazon Web Services', 83],
             ['Scrum', 95],
             ['Cordova/Phonegap', 85],
-            ['Jenkins', 80],
+            ['Selenium/Jenkins', 80],
             ['SQL', 85],
             ['Linux', 92],
             ['Windows', 88],
