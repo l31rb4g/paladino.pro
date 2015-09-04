@@ -433,7 +433,7 @@ Interface = {
             ['Javascript', 96],
             ['Shell/bash', 86],
             ['HTML 5', 90],
-            ['CSS 3', 85],
+            ['CSS 3', 90],
             ['jQuery', 97],
             ['MooTools', 98],
             ['Django', 84],
