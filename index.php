@@ -1,3 +1,8 @@
+<?php
+if ($_SERVER['HTTP_HOST'] == '54.208.162.187'){
+	die;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
