@@ -428,22 +428,22 @@ Interface = {
 
     skills: function(){
         var skills = [
-            ['Python', 92],
-            ['PHP', 94],
-            ['Javascript', 96],
-            ['Shell/bash', 86],
-            ['HTML 5', 90],
-            ['CSS 3', 90],
-            ['jQuery', 97],
-            ['MooTools', 98],
-            ['Django', 84],
-            ['CakePHP', 88],
+            ['Python', 94],
+            ['PHP', 92],
+            ['Javascript', 98],
+            ['Linux', 90],
+            ['HTML/CSS', 90],
+            //['CSS 3', 90],
+            //['jQuery', 97],
+            //['MooTools', 98],
+            ['Django', 88],
+            ['CakePHP', 85],
             ['Amazon Web Services', 83],
-            ['Scrum', 95],
+            ['Scrum/Agile', 95],
             ['Cordova/Phonegap', 85],
             ['Selenium/Jenkins', 80],
-            ['SQL', 85],
-            ['Linux', 92],
+            //['SQL', 85],
+            //['Linux', 92],
             ['Windows', 88],
             ['Git', 95]
         ];
@@ -496,7 +496,7 @@ Interface = {
         var idioms = [
             ['Português', 98],
             ['English', 85],
-            ['Español', 35]
+            ['Español', 40]
         ];
         idioms.each(function(idiom){
             new Element('div', {'text': idiom[0]}).adopt(
@@ -508,7 +508,7 @@ Interface = {
 
         el.inject($$('body')[0]);
         el.set('tween', {'duration': 500, transition: Fx.Transitions.Cubic.easeOut});
-        el.tween('left', 620 + this.centerWidth);
+        el.tween('left', 335 + this.centerWidth);
 
         setTimeout(function(){
             el.getElements('.progressbar').each(function(el){
@@ -549,7 +549,28 @@ Interface = {
                     'text': 'plataforma adaptativa para personalizar as atividades dos alunos, incluindo a utilização de aplicativos para dispositivos móveis próprios e exclusivos em sala de aula.'
                 })
             ),
-            new Element('div', {'class': 'job project', 'styles': {'margin-top': 30}}).adopt(
+            new Element('div', {'class': 'job project', 'styles': {'margin-top': 25}}).adopt(
+                new Element('a', {'href': 'http://www.faleonibus.com.br/', 'target': '_blank'}).adopt(
+                    new Element('img', {
+                        'src': '/img/faleonibus.png',
+                        'styles': {
+                            'margin-top': 14
+                        }
+                    })
+                ),
+                new Element('div').adopt(
+                    new Element('div', {'text': 'FaleÔnibus', 'class': 'company'}),
+                    new Element('div', {
+                        'class': 'description',
+                        'text': 'FaleÔnibus é o sistema de atendimento ao cliente da Fetranspor. Ele atende a todas as linhas de ônibus'
+                    })
+                ),
+                new Element('div', {
+                    'class': 'description more',
+                    'text': 'do estado do Rio de Janeiro, fazendo a conexão entre os passageiros e as empresas.'
+                })
+            ),
+            new Element('div', {'class': 'job project', 'styles': {'margin-top': 25}}).adopt(
                 new Element('a', {'href': 'http://www.meuingles.com/', 'target': '_blank'}).adopt(
                     new Element('img', {
                         'src': '/img/meuingles.png',
