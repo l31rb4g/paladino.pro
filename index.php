@@ -22,6 +22,6 @@ if ($_SERVER['HTTP_HOST'] == '54.208.162.187'){
 
 </head>
 <body>
-
+    O Windows não é ruim, é só esperar ele ficar pronto.
 </body>
 </html>
