@@ -170,7 +170,7 @@ Interface = {
         });
 
         var fotos = ['foto.jpg', 'foto2.jpg', 'foto3.jpg'];
-        var foto_src = fotos[Math.round(Math.random() * fotos.length)];
+        var foto_src = fotos[Math.floor(Math.random() * fotos.length)];
 
         for (var i=0; i<pieces*pieces; i++) {
             var img = new Element('span', {
