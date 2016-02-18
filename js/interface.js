@@ -160,7 +160,7 @@ Interface = {
         var c = 1;
         var stepx = 0;
         var stepy = 0;
-        var x = 0
+        var x = 0;
         var y = 0;
 
         var obj = new FlyingObject({
@@ -169,10 +169,8 @@ Interface = {
             interval: 10
         });
 
-        var n = '';
-        if (Math.round(Math.random() * 100) >= 50){
-            n = '2';
-        }
+        var fotos = ['foto.jpg', 'foto2.jpg', 'foto3.jpg'];
+        var foto_src = fotos[Math.round(Math.random() * fotos.length)];
 
         for (var i=0; i<pieces*pieces; i++) {
             var img = new Element('span', {
@@ -180,7 +178,7 @@ Interface = {
                     'display': 'inline-block',
                     'width': pieceSize,
                     'height': pieceSize,
-                    'background': 'url(img/foto' + n + '.jpg) -' + x + 'px -' + y + 'px no-repeat'
+                    'background': 'url(img/' + foto_src + ') -' + x + 'px -' + y + 'px no-repeat'
                 }
             });
 
