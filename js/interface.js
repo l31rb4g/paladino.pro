@@ -484,7 +484,7 @@ Interface = {
         var el = new Element('div', {
             'styles': {
                 'position': 'absolute',
-                'top': 450 + this.centerHeight,
+                'top': 465 + this.centerHeight,
                 'left': -1000
             }
         }).adopt(
