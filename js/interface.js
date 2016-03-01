@@ -565,7 +565,7 @@ Interface = {
                 ),
                 new Element('div', {
                     'class': 'description more',
-                    'text': 'do estado do Rio de Janeiro, fazendo a conexão entre os passageiros, as empresas e os consórcios.'
+                    'text': 'do estado do Rio de Janeiro, fazendo a conexão entre passageiros, empresas, consórcios e sindicatos.'
                 })
             ),
             new Element('div', {'class': 'job project', 'styles': {'margin-top': 25}}).adopt(
