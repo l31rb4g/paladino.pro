@@ -493,7 +493,7 @@ Interface = {
         );
         var idioms = [
             ['Português', 98],
-            ['English', 85],
+            ['English', 90],
             ['Español', 40]
         ];
         idioms.each(function(idiom){
