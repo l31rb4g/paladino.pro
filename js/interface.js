@@ -169,7 +169,7 @@ Interface = {
             interval: 10
         });
 
-        var fotos = ['foto.jpg', 'foto2.jpg', 'foto3.jpg'];
+        var fotos = ['foto.jpg', 'foto2.jpg', 'foto3.jpg', 'foto4.jpg'];
         var foto_src = fotos[Math.floor(Math.random() * fotos.length)];
 
         for (var i=0; i<pieces*pieces; i++) {
