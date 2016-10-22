@@ -373,7 +373,7 @@ Interface = {
                 new Element('div').adopt(
                     new Element('div', {'text': 'Pearson', 'class': 'company'}),
                     new Element('div', {'text': 'Senior Software Engineer'}),
-                    new Element('div', {'text': 'junho/2014 - atualmente'})
+                    new Element('div', {'text': 'junho/2014 - janeiro/2016'})
                 )
             ),
             new Element('div', {'class': 'job'}).adopt(
