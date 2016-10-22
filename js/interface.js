@@ -426,23 +426,23 @@ Interface = {
 
     skills: function(){
         var skills = [
-            ['Python', 94],
-            ['PHP', 92],
+            ['Python', 95],
+            ['PHP', 94],
             ['Javascript', 98],
-            ['Linux', 90],
-            ['HTML/CSS', 90],
+            ['Linux', 92],
+            ['HTML5/CSS3', 90],
             //['CSS 3', 90],
             //['jQuery', 97],
             //['MooTools', 98],
-            ['Django', 88],
-            ['CakePHP', 85],
+            ['Django', 90],
+            ['CakePHP/Laravel', 85],
             ['Amazon Web Services', 83],
             ['Scrum/Agile', 95],
             ['Cordova/Phonegap', 85],
             ['Selenium/Jenkins', 80],
             //['SQL', 85],
             //['Linux', 92],
-            ['Windows', 88],
+            //['Windows', 88],
             ['Git', 95]
         ];
         //this.shuffle(skills);
