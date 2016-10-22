@@ -434,7 +434,7 @@ Interface = {
             //['CSS 3', 90],
             //['jQuery', 97],
             //['MooTools', 98],
-            ['Django', 90],
+            ['Django', 92],
             ['CakePHP/Laravel', 85],
             ['Amazon Web Services', 83],
             ['Scrum/Agile', 95],
