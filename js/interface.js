@@ -436,7 +436,7 @@ Interface = {
             //['MooTools', 98],
             ['Django', 92],
             ['CakePHP/Laravel', 85],
-            ['Amazon Web Services', 83],
+            ['Amazon Web Services', 90],
             ['Scrum/Agile', 95],
             ['Cordova/Phonegap', 85],
             ['Selenium/Jenkins', 80],
