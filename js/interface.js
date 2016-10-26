@@ -437,7 +437,7 @@ Interface = {
             ['Django', 92],
             ['CakePHP/Laravel', 85],
             ['Amazon Web Services', 90],
-            ['Scrum/Agile', 95],
+            ['Scrum/Kanban/Agile', 95],
             ['Cordova/Phonegap', 85],
             ['TDD/Selenium/Jenkins', 80],
             //['SQL', 85],
