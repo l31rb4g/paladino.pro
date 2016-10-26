@@ -429,7 +429,7 @@ Interface = {
             ['Python', 95],
             ['PHP', 94],
             ['Javascript', 98],
-            ['Linux', 92],
+            ['Linux/Bash', 92],
             ['HTML5/CSS3', 90],
             //['CSS 3', 90],
             //['jQuery', 97],
