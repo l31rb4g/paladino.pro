@@ -415,7 +415,7 @@ Interface = {
                 new Element('div').adopt(
                     new Element('div', {'text': 'RJHost', 'class': 'company'}),
                     new Element('div', {'text': 'Web Developer'}),
-                    new Element('div', {'text': 'julho/2007 - agosto/2009'})
+                    new Element('div', {'text': 'maio/2007 - agosto/2009'})
                 )
             )
         );
