@@ -39,7 +39,7 @@ $notes = file_get_contents('/home/l31rb4g/notes.txt', 'r');
       window.timer = setTimeout(() => {
 			  new Request({
 				  data: {
-					  notes: encodeURIComponent(this.get('value'))
+					  notes: this.get('value')
 				  }
 			  }).send();
       }, 250);
