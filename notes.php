@@ -1,7 +1,7 @@
 <?php
 $notes_file = '/home/l31rb4g/notes.txt';
 if (isset($_POST['notes'])) {
-  $notes = trim($_POST['notes']);
+  $notes = $_POST['notes'];
   $f = fopen($notes_file, 'w');
   fwrite($f, $notes);
   fclose($f);
