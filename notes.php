@@ -3,7 +3,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 if (isset($_POST['notes'])) {
   $notes = trim($_POST['notes']);
-  $f = fopen('notes.txt', 'w');
+  $f = fopen('/home/l31rb4g/notes.txt', 'w');
   fwrite($f, $notes);
   fclose($f);
   die;
