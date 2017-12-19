@@ -22,15 +22,15 @@
     if (window.timer){
       clearTimeout(window.timer);
     }
-	  window.timer = setTimeout(() => {
-		  $$('pre')[0].addEvent('keydown', function(){
+	  $$('pre')[0].addEvent('keydown', function(){
+      window.timer = setTimeout(() => {
 			  new Request({
 				  data: {
 					  notes: encodeURIComponent(this.get('text'))
 				  }
 			  }).send();
-		  });
-	  }, 250);
+      }, 250);
+	  });
   });
   </script>
 </body>
