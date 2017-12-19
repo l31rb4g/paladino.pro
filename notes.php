@@ -21,7 +21,9 @@
   window.addEvent('domready', function(){
       $$('pre')[0].addEvent('keydown', function(){
           new Request({
-              'data': this.get('value')
+              data: {
+                  notes: encodeURIComponent(this.get('value'))
+              }
           }).send();
       });
   });
