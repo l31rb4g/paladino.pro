@@ -1,6 +1,6 @@
 <?php
+ini_set('display_errors', true);
 if (isset($_POST['notes'])){
-  echo 'lol';
   $notes = trim($_POST['notes']);
   f = fopen('notes.txt', 'w')
   f.write($notes);
