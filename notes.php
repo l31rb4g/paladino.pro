@@ -1,8 +1,9 @@
 <?php
-ini_set('display_errors', true);
+error_reporting(E_ALL);
+ini_set('display_errors', 'on');
 if (isset($_POST['notes'])){
   $notes = trim($_POST['notes']);
-  f = fopen('notes.txt', 'w')
+  f = fopen('notes.txt', 'w');
   f.write($notes);
   f.close();
   die;
