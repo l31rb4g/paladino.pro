@@ -3,6 +3,9 @@
 <head>
   <title>Notes</title>
   <style type="text/css">
+    body {
+      overflow: hidden;
+    }
     pre {
       width: 100%;
       height: 100%;
