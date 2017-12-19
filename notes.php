@@ -4,8 +4,8 @@ ini_set('display_errors', 'on');
 if (isset($_POST['notes'])) {
   $notes = trim($_POST['notes']);
   $f = fopen('notes.txt', 'w');
-  $f.write($notes);
-  $f.close();
+  fwrite($f, $notes);
+  fclose($f);
   die;
 }
 ?>
