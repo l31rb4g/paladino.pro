@@ -8,9 +8,7 @@ if (isset($_POST['notes'])) {
   fclose($f);
   die;
 }
-$f = fopen('/home/l31rb4g/notes.txt', 'r');
-$notes = fread($f);
-fclose($f);
+$notes = file_get_contents('/home/l31rb4g/notes.txt', 'r');
 ?>
 <!DOCTYPE html>
 <html>
