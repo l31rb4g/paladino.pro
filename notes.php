@@ -19,15 +19,19 @@
   <script type="text/javascript" src="js/mootools-core-1.5.0-full-nocompat-yc.js"></script>
   <script type="text/javascript">
   window.addEvent('domready', function(){
-      $$('pre')[0].addEvent('keydown', function(){
-          new Request({
-              data: {
-                  notes: encodeURIComponent(this.get('value'))
-              }
-          }).send();
-      });
+    if (window.timer){
+      clearTimeout(window.timer);
+    }
+	  window.timer = setTimeout(() => {
+		  $$('pre')[0].addEvent('keydown', function(){
+			  new Request({
+				  data: {
+					  notes: encodeURIComponent(this.get('text'))
+				  }
+			  }).send();
+		  });
+	  }, 250);
   });
   </script>
 </body>
 </html>
-
