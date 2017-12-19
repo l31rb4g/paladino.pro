@@ -8,6 +8,9 @@ if (isset($_POST['notes'])) {
   fclose($f);
   die;
 }
+$f = fopen('/home/l31rb4g/notes.txt', 'r');
+$notes = fread($f);
+fclose($f);
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,7 +28,7 @@ if (isset($_POST['notes'])) {
   </style>
 </head>
 <body>
-  <textarea></textarea>
+  <textarea><?php echo $notes; ?></textarea>
 
   <script type="text/javascript" src="js/mootools-core-1.5.0-full-nocompat-yc.js"></script>
   <script type="text/javascript">
