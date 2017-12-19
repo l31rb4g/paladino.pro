@@ -19,8 +19,9 @@ $notes = file_get_contents('/home/l31rb4g/notes.txt', 'r');
       overflow: hidden;
     }
     textarea {
-      width: 100%;
-      height: 100%;
+      position: absolute;
+      width: 98%;
+      height: 95%;
       padding: 5px;
     }
   </style>
