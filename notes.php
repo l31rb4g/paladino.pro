@@ -1,14 +1,13 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+$notes_file = '/home/l31rb4g/notes.txt';
 if (isset($_POST['notes'])) {
   $notes = trim($_POST['notes']);
-  $f = fopen('/home/l31rb4g/notes.txt', 'w');
+  $f = fopen($notes_file, 'w');
   fwrite($f, $notes);
   fclose($f);
   die;
 }
-$notes = file_get_contents('/home/l31rb4g/notes.txt', 'r');
+$notes = file_get_contents($notes_file, 'r');
 ?>
 <!DOCTYPE html>
 <html>
