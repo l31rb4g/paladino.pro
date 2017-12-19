@@ -19,10 +19,10 @@
   <script type="text/javascript" src="js/mootools-core-1.5.0-full-nocompat-yc.js"></script>
   <script type="text/javascript">
   window.addEvent('domready', function(){
-    if (window.timer){
-      clearTimeout(window.timer);
-    }
 	  $$('pre')[0].addEvent('keydown', function(){
+      if (window.timer){
+        clearTimeout(window.timer);
+      }
       window.timer = setTimeout(() => {
 			  new Request({
 				  data: {
