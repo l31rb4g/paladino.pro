@@ -21,7 +21,8 @@ $notes = file_get_contents($notes_file, 'r');
       position: absolute;
       width: 98%;
       height: 95%;
-      padding: 5px;
+      border: none;
+      font-size: 14px;
     }
   </style>
 </head>
