@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER['HTTP_HOST'] == '34.234.32.45'){
-    die;
+    //die;
 }
 $date = date('Ymd');
 ?>
