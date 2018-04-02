@@ -426,10 +426,10 @@ Interface = {
 
     skills: function(){
         var skills = [
-            ['Python', 95],
+            ['Python', 98],
             ['PHP', 94],
-            ['Javascript', 98],
-            ['Linux/Bash', 92],
+            ['Javascript', 96],
+            ['Linux/Bash', 97],
             ['HTML5/CSS3', 90],
             //['CSS 3', 90],
             //['jQuery', 97],
