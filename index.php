@@ -22,6 +22,7 @@ $date = date('Ymd');
 
 </head>
 <body>
-    O Windows não é ruim, é só esperar ele ficar pronto.
+    O mundo está cheio de surpresas. E de automóveis.
 </body>
 </html>
+
