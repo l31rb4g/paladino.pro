@@ -1,6 +1,10 @@
 <?php
-$user = 'l31rb4g';
-$pass = 'asdf1234';
+$auth_file = '.auth';
+$f = fopen($auth_file, 'r');
+$credentials = fread($f);
+fclose($f);
+print_r($credentials);
+die;
 
 if (!isset($_SERVER['PHP_AUTH_USER']) ||
         (!(
