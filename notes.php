@@ -5,6 +5,8 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     header('HTTP/1.0 401 Unauthorized');
     echo 'Acesso negado.';
     die;
+} else {
+    print_r($_SERVER['PHP_AUTH_USER']);
 }
 
 $notes_file = '/home/l31rb4g/notes.txt';
