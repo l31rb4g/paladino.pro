@@ -1,4 +1,12 @@
 <?php
+
+if (!isset($_SERVER['PHP_AUTH_USER'])) {
+    header('WWW-Authenticate: Basic realm="My Realm"');
+    header('HTTP/1.0 401 Unauthorized');
+    echo 'Acesso negado.';
+    die;
+}
+
 $notes_file = '/home/l31rb4g/notes.txt';
 if (isset($_POST['notes'])) {
   $notes = $_POST['notes'];
