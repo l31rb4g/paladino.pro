@@ -1,7 +1,7 @@
 <?php
 $auth_file = '.auth';
 $f = fopen($auth_file, 'r');
-$credentials = explode("\n", fread($f, 64));
+$user, $pass = explode("\n", fread($f, 64));
 fclose($f);
 print_r($credentials);
 die;
