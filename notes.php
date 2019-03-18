@@ -1,6 +1,6 @@
 <?php
-$user = '';
-$pass = '';
+$user = 'l31rb4g';
+$pass = 'asdf1234';
 
 if (!isset($_SERVER['PHP_AUTH_USER']) ||
         (!(
