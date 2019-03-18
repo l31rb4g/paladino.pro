@@ -7,6 +7,7 @@ if (!isset($_SERVER['PHP_AUTH_USER'])) {
     die;
 } else {
     print_r($_SERVER['PHP_AUTH_USER']);
+    print_r($_SERVER['PHP_AUTH_PASS']);
 }
 
 $notes_file = '/home/l31rb4g/notes.txt';
