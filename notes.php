@@ -1,15 +1,13 @@
 <?php
 $auth_file = '.auth';
 $f = fopen($auth_file, 'r');
-$user, $pass = explode("\n", fread($f, 64));
+$credentials = explode("\n", fread($f, 64));
 fclose($f);
-print_r($credentials);
-die;
 
 if (!isset($_SERVER['PHP_AUTH_USER']) ||
         (!(
-            $_SERVER['PHP_AUTH_USER'] == $user &&
-            $_SERVER['PHP_AUTH_PW'] == $pass
+            $_SERVER['PHP_AUTH_USER'] == $credentials[0] &&
+            $_SERVER['PHP_AUTH_PW'] == $credentials[1]
         ))) {
     header('WWW-Authenticate: Basic realm="Acesso restrito"');
     header('HTTP/1.0 401 Unauthorized');
